@@ -5,7 +5,7 @@
     <key>CFBundleDevelopmentRegion</key>
     <string>vi</string>
     <key>CFBundleDisplayName</key>
-    <string>Tuệ Nhãn: Thức Anh Hùng</string>
+    <string>Tuệ Nhãn</string>
     <key>CFBundleExecutable</key>
     <string>TueNhan</string>
     <key>CFBundleIdentifier</key>
@@ -20,6 +20,24 @@
     <string>1.0.0</string>
     <key>CFBundleVersion</key>
     <string>1.0.0</string>
+    <key>CFBundleSupportedPlatforms</key>
+    <array>
+        <string>iPhoneOS</string>
+    </array>
+    <key>DTPlatformName</key>
+    <string>iphoneos</string>
+    <key>DTSDKName</key>
+    <string>iphoneos16.4</string>
+    <key>DTPlatformVersion</key>
+    <string>16.4</string>
+    <key>DTCompiler</key>
+    <string>com.apple.compilers.llvm.clang.1_0</string>
+    <key>DTXcode</key>
+    <string>1430</string>
+    <key>DTXcodeBuild</key>
+    <string>14E222b</string>
+    <key>MinimumOSVersion</key>
+    <string>14.0</string>
     <key>LSRequiresIPhoneOS</key>
     <true/>
     <key>UIRequiresFullScreen</key>
@@ -32,6 +50,12 @@
     <string>LaunchScreen</string>
     <key>XSAppIconAssets</key>
     <string>Assets.xcassets/AppIcon.appiconset</string>
+    <key>CFBundleIconFiles</key>
+    <array>
+        <string>AppIcon60x60@2x.png</string>
+        <string>AppIcon60x60@3x.png</string>
+        <string>AppIcon76x76@2x~ipad.png</string>
+    </array>
     <key>UISupportedInterfaceOrientations</key>
     <array>
         <string>UIInterfaceOrientationLandscapeLeft</string>
