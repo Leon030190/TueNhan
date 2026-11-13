@@ -300,8 +300,8 @@ func refresh() -> void :
 			if str(w.nations[nid]["capital"]) == cid:
 				is_cap = true
 		b.text = ("♛ " if is_cap else "") + nm
-		b.add_theme_font_size_override("font_size", 17 if big else 13)
-		var pad: = 7 if big else 3
+		b.add_theme_font_size_override("font_size", 18 if big else 15)
+		var pad: = 8 if big else 4
 		var tip: = str(w.cities[cid].get("desc", ""))
 		var feats: Array = []
 		for f in w.cities[cid].get("features", []):

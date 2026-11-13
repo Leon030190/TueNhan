@@ -65,6 +65,8 @@ func bot_stopped() -> void :
 
 
 func _ready() -> void :
+	if DisplayServer.has_method("screen_set_orientation"):
+		DisplayServer.screen_set_orientation(DisplayServer.SCREEN_SENSOR_LANDSCAPE)
 	carry_old_saves()
 	theme = UIKit.make_theme()
 	var bg: = ColorRect.new()

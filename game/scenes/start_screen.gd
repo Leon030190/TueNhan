@@ -22,10 +22,24 @@ func _ready() -> void :
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	Music.set_context("chu_de")
 
+	var margin: = MarginContainer.new()
+	margin.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	var safe: Rect2i = DisplayServer.get_display_safe_area()
+	var win: Vector2i = DisplayServer.window_get_size()
+	var pad_l: int = 16
+	var pad_r: int = 16
+	if win.x > 0 and safe.size.x > 0:
+		var sx: float = get_viewport_rect().size.x / float(win.x)
+		pad_l = maxi(16, int(safe.position.x * sx) + 4)
+		pad_r = maxi(16, int((win.x - (safe.position.x + safe.size.x)) * sx) + 4)
+	margin.add_theme_constant_override("margin_left", pad_l)
+	margin.add_theme_constant_override("margin_right", pad_r)
+	add_child(margin)
+
 	var scroll: = ScrollContainer.new()
 	scroll.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
-	add_child(scroll)
+	margin.add_child(scroll)
 	var outer: = UIKit.hbox(0)
 	outer.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	outer.size_flags_vertical = Control.SIZE_EXPAND_FILL

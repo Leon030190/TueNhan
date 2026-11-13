@@ -121,35 +121,35 @@ static func make_theme() -> Theme:
 	var f: = SystemFont.new()
 	f.font_names = PackedStringArray(["Segoe UI", "Arial", "Noto Sans", "DejaVu Sans"])
 	t.default_font = f
-	t.default_font_size = 18
+	t.default_font_size = 20
 	t.set_color("font_color", "Label", TEXT)
 	t.set_color("default_color", "RichTextLabel", TEXT)
 	t.set_stylebox("normal", "RichTextLabel", sb(Color(0, 0, 0, 0), Color(0, 0, 0, 0), 2))
-	t.set_stylebox("panel", "PanelContainer", tsb("panel.png", 22, 18, sb(PANEL, LINE, 12, 6)))
-	t.set_stylebox("panel", "TabContainer", sb(PANEL, LINE, 8, 6))
-	t.set_stylebox("tab_selected", "TabContainer", _tab_sb("tab_selected.png", sb(PANEL2, GOLD, 12, 6)))
-	t.set_stylebox("tab_unselected", "TabContainer", _tab_sb("tab_unselected.png", sb(BG, LINE, 12, 6)))
-	t.set_stylebox("tab_hovered", "TabContainer", _tab_sb("tab_hovered.png", sb(PANEL2, LINE, 12, 6)))
+	t.set_stylebox("panel", "PanelContainer", tsb("panel.png", 14, 10, sb(PANEL, LINE, 8, 5)))
+	t.set_stylebox("panel", "TabContainer", sb(PANEL, LINE, 6, 5))
+	t.set_stylebox("tab_selected", "TabContainer", _tab_sb("tab_selected.png", sb(PANEL2, GOLD, 14, 8)))
+	t.set_stylebox("tab_unselected", "TabContainer", _tab_sb("tab_unselected.png", sb(BG, LINE, 14, 8)))
+	t.set_stylebox("tab_hovered", "TabContainer", _tab_sb("tab_hovered.png", sb(PANEL2, LINE, 14, 8)))
 	t.set_color("font_selected_color", "TabContainer", GOLD)
 	t.set_color("font_unselected_color", "TabContainer", DIM)
 	t.set_color("font_hovered_color", "TabContainer", TEXT)
-	t.set_font_size("font_size", "TabContainer", 17)
+	t.set_font_size("font_size", "TabContainer", 19)
 	for cls in ["Button", "OptionButton"]:
-		t.set_stylebox("normal", cls, tsb("button_normal.png", 20, 11, sb(PANEL2, LINE, 9, 6)))
-		t.set_stylebox("hover", cls, tsb("button_hover.png", 20, 11, sb(Color("3a3326"), GOLD, 9, 6)))
-		t.set_stylebox("pressed", cls, tsb("button_pressed.png", 20, 11, sb(Color("4a4130"), GOLD, 9, 6)))
-		t.set_stylebox("disabled", cls, tsb("button_disabled.png", 20, 11, sb(Color("1d1a15"), Color("2c2720"), 9, 6)))
-		t.set_stylebox("focus", cls, sb(Color(0, 0, 0, 0), Color(0, 0, 0, 0), 9))
+		t.set_stylebox("normal", cls, tsb("button_normal.png", 15, 8, sb(PANEL2, LINE, 8, 5)))
+		t.set_stylebox("hover", cls, tsb("button_hover.png", 15, 8, sb(Color("3a3326"), GOLD, 8, 5)))
+		t.set_stylebox("pressed", cls, tsb("button_pressed.png", 15, 8, sb(Color("4a4130"), GOLD, 8, 5)))
+		t.set_stylebox("disabled", cls, tsb("button_disabled.png", 15, 8, sb(Color("1d1a15"), Color("2c2720"), 8, 5)))
+		t.set_stylebox("focus", cls, sb(Color(0, 0, 0, 0), Color(0, 0, 0, 0), 8))
 		t.set_color("font_color", cls, TEXT)
 		t.set_color("font_hover_color", cls, GOLD)
 		t.set_color("font_pressed_color", cls, GOLD)
 		t.set_color("font_disabled_color", cls, Color("6a6252"))
-		t.set_font_size("font_size", cls, 17)
-	t.set_stylebox("normal", "LineEdit", sb(PANEL2, LINE, 9, 5))
-	t.set_font_size("font_size", "LineEdit", 17)
+		t.set_font_size("font_size", cls, 19)
+	t.set_stylebox("normal", "LineEdit", sb(PANEL2, LINE, 8, 5))
+	t.set_font_size("font_size", "LineEdit", 18)
 	t.set_stylebox("normal", "SpinBox", sb(PANEL2, LINE, 6, 5))
-	t.set_font_size("font_size", "SpinBox", 17)
-	t.set_stylebox("panel", "Tree", sb(PANEL, LINE, 6, 6))
+	t.set_font_size("font_size", "SpinBox", 18)
+	t.set_stylebox("panel", "Tree", sb(PANEL, LINE, 5, 5))
 	t.set_stylebox("selected", "Tree", sb(Color("4a4130"), GOLD, 4, 4))
 	t.set_stylebox("selected_focus", "Tree", sb(Color("4a4130"), GOLD, 4, 4))
 	t.set_stylebox("focus", "Tree", sb(Color(0, 0, 0, 0), Color(0, 0, 0, 0), 2))
@@ -160,16 +160,16 @@ static func make_theme() -> Theme:
 	t.set_color("font_selected_color", "Tree", GOLD)
 	t.set_color("title_button_color", "Tree", DIM)
 	t.set_color("guide_color", "Tree", Color(1, 1, 1, 0.04))
-	t.set_font_size("font_size", "Tree", 16)
-	t.set_font_size("title_button_font_size", "Tree", 16)
-	t.set_constant("v_separation", "Tree", 10)
+	t.set_font_size("font_size", "Tree", 18)
+	t.set_font_size("title_button_font_size", "Tree", 18)
+	t.set_constant("v_separation", "Tree", 12)
 	t.set_stylebox("panel", "PopupMenu", sb(PANEL2, GOLD, 8, 6))
 	t.set_color("font_color", "PopupMenu", TEXT)
 	t.set_color("font_hover_color", "PopupMenu", GOLD)
-	t.set_font_size("font_size", "PopupMenu", 17)
+	t.set_font_size("font_size", "PopupMenu", 18)
 	t.set_stylebox("panel", "TooltipPanel", sb(PANEL3, GOLD, 10, 6))
 	t.set_color("font_color", "TooltipLabel", TEXT)
-	t.set_font_size("font_size", "TooltipLabel", 16)
+	t.set_font_size("font_size", "TooltipLabel", 17)
 	return t
 
 
@@ -201,7 +201,7 @@ static func range_text(b: Array) -> String:
 	return col("%d–%d" % [int(b[0]), int(b[1])], grade_color((float(b[0]) + float(b[1])) / 2.0))
 
 
-static func label(text: String, size: int = 17, c: Color = TEXT) -> Label:
+static func label(text: String, size: int = 19, c: Color = TEXT) -> Label:
 	var l: = Label.new()
 	l.text = text
 	l.add_theme_font_size_override("font_size", size)
@@ -209,7 +209,7 @@ static func label(text: String, size: int = 17, c: Color = TEXT) -> Label:
 	return l
 
 
-static func wrap_label(text: String, size: int = 17, c: Color = TEXT) -> Label:
+static func wrap_label(text: String, size: int = 19, c: Color = TEXT) -> Label:
 	var l: = label(text, size, c)
 	l.autowrap_mode = TextServer.AUTOWRAP_WORD_SMART
 	l.custom_minimum_size.x = 100
@@ -237,7 +237,7 @@ static func button(text: String, cb: Callable, tip: String = "") -> Button:
 	var b: = Button.new()
 	b.text = text
 	b.tooltip_text = wrap_tip(tip)
-	b.custom_minimum_size.y = 36
+	b.custom_minimum_size.y = 38
 	b.mouse_default_cursor_shape = Control.CURSOR_POINTING_HAND
 	if cb.is_valid():
 		b.pressed.connect(cb)
@@ -314,7 +314,7 @@ static func set_pref(key: String, value: Variant) -> void :
 	cf.save(settings_path)
 
 
-static func modal(host: Control, title: String, width: int = 740) -> VBoxContainer:
+static func modal(host: Control, title: String, width: int = 780) -> VBoxContainer:
 	var overlay: = Control.new()
 	overlay.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	overlay.mouse_filter = Control.MOUSE_FILTER_STOP
@@ -325,22 +325,22 @@ static func modal(host: Control, title: String, width: int = 740) -> VBoxContain
 	var center: = CenterContainer.new()
 	center.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	overlay.add_child(center)
-	var body: = vbox(12)
+	var body: = vbox(10)
 	body.custom_minimum_size.x = width
-	var p: = panel(body, PANEL2, 20)
-	p.add_theme_stylebox_override("panel", tsb("modal.png", 28, 24, sb(PANEL2, GOLD, 20, 8)))
+	var p: = panel(body, PANEL2, 14)
+	p.add_theme_stylebox_override("panel", tsb("modal.png", 22, 18, sb(PANEL2, GOLD, 16, 6)))
 	center.add_child(p)
 
 	var head: = hbox()
 	var ph: = Control.new()
 	ph.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	head.add_child(ph)
-	var tl: = label(title, 24, GOLD)
+	var tl: = label(title, 25, GOLD)
 	tl.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	tl.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 	head.add_child(tl)
 	var xb: = button(" ✕ ", func() -> void : overlay.queue_free())
-	xb.custom_minimum_size = Vector2(40, 36)
+	xb.custom_minimum_size = Vector2(42, 38)
 	xb.resized.connect( func() -> void : ph.custom_minimum_size.x = xb.size.x)
 	head.add_child(xb)
 	body.add_child(head)

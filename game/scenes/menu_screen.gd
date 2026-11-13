@@ -61,11 +61,11 @@ func _ready() -> void :
 
 	var ver: = UIKit.label("v%s" % str(ProjectSettings.get_setting("application/config/version", "")), 12, Color(UIKit.DIM, 0.8))
 	ver.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_LEFT)
-	ver.position += Vector2(16, -28)
+	ver.position += Vector2(28, -28)
 	add_child(ver)
 	var dbg: = UIKit.button("👑 Bàn mô phỏng (Debug)", func() -> void : main.open_debug(), "Debug: xem toàn bộ sự thật của thế giới và mô phỏng")
 	dbg.set_anchors_and_offsets_preset(Control.PRESET_BOTTOM_RIGHT)
-	dbg.position -= Vector2(20, 20)
+	dbg.position -= Vector2(36, 24)
 	dbg.grow_horizontal = Control.GROW_DIRECTION_BEGIN
 	dbg.grow_vertical = Control.GROW_DIRECTION_BEGIN
 	dbg.add_theme_color_override("font_color", UIKit.GOLD)

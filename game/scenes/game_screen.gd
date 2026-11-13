@@ -61,24 +61,54 @@ func _ready() -> void :
 
 
 
+var _root_margin: MarginContainer
+
+
+func _apply_safe_margins() -> void :
+	if not is_instance_valid(_root_margin):
+		return
+	var safe: Rect2i = DisplayServer.get_display_safe_area()
+	var win: Vector2i = DisplayServer.window_get_size()
+	var pad_l: int = 16
+	var pad_r: int = 16
+	var pad_t: int = 8
+	var pad_b: int = 8
+	if win.x > 0 and win.y > 0 and safe.size.x > 0 and safe.size.y > 0:
+		var vp_size: Vector2 = get_viewport_rect().size
+		var sx: float = vp_size.x / float(win.x)
+		var sy: float = vp_size.y / float(win.y)
+		var s_left: int = int(safe.position.x * sx)
+		var s_right: int = int((win.x - (safe.position.x + safe.size.x)) * sx)
+		var s_top: int = int(safe.position.y * sy)
+		var s_bottom: int = int((win.y - (safe.position.y + safe.size.y)) * sy)
+		pad_l = maxi(16, s_left + 4)
+		pad_r = maxi(16, s_right + 4)
+		pad_t = maxi(8, s_top + 2)
+		pad_b = maxi(8, s_bottom + 2)
+	_root_margin.add_theme_constant_override("margin_left", pad_l)
+	_root_margin.add_theme_constant_override("margin_right", pad_r)
+	_root_margin.add_theme_constant_override("margin_top", pad_t)
+	_root_margin.add_theme_constant_override("margin_bottom", pad_b)
+
+
 func _build() -> void :
-	var margin: = MarginContainer.new()
-	margin.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
-	for side in ["left", "right", "top", "bottom"]:
-		margin.add_theme_constant_override("margin_" + side, 10)
-	add_child(margin)
-	var root: = UIKit.vbox(8)
-	margin.add_child(root)
+	_root_margin = MarginContainer.new()
+	_root_margin.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	add_child(_root_margin)
+	_apply_safe_margins()
+	get_tree().root.size_changed.connect(_apply_safe_margins)
+	var root: = UIKit.vbox(6)
+	_root_margin.add_child(root)
 
 
-	var top: = UIKit.hbox(9)
+	var top: = UIKit.hbox(8)
 	top.alignment = BoxContainer.ALIGNMENT_BEGIN
-	root.add_child(UIKit.panel(top, UIKit.PANEL, 8))
-	_cell(top, "date", "", 22)
+	root.add_child(UIKit.panel(top, UIKit.PANEL, 6))
+	_cell(top, "date", "", 24)
 	top.add_child(VSeparator.new())
 	for spec in [["here", "Đang ở"], ["ap", "Ngày"], ["eye", "Nhãn lực"], ["money", "Ngân lượng"], ["prestige", "Danh vọng"], ["clan", "Gia tộc"], ["mat", "Đôi Mắt"]]:
-		_cell(top, spec[0], spec[1])
-	war_cell = _cell(top, "war", "Chiến sự")
+		_cell(top, spec[0], spec[1], 20)
+	war_cell = _cell(top, "war", "Chiến sự", 20)
 	top.add_child(UIKit.spacer())
 	var admin_btn: = UIKit.button("👑 Admin", func() -> void : AdminPanel.open(self), "Bảng điều khiển Admin / Thiên Mệnh: Thêm tài nguyên, sửa chỉ số, hệ thống game")
 	admin_btn.add_theme_stylebox_override("normal", UIKit.sb(Color("3b2450"), UIKit.PURPLE, 8))
@@ -113,44 +143,45 @@ func _build() -> void :
 	root.add_child(body)
 
 
-	var left: = UIKit.vbox(8)
-	left.custom_minimum_size.x = 370
+	var left: = UIKit.vbox(6)
+	left.custom_minimum_size.x = 320
 	body.add_child(left)
 	map_view = MapView.new()
 	map_view.setup(w)
-	map_view.custom_minimum_size = Vector2(360, 330)
+	map_view.custom_minimum_size = Vector2(310, 255)
 	map_view.city_pressed.connect(_on_city)
 	left.add_child(UIKit.panel(map_view, UIKit.PANEL, 4))
-	var cbox: = UIKit.vbox(6)
-	city_title = UIKit.label("", 20, UIKit.GOLD)
+	var cbox: = UIKit.vbox(5)
+	city_title = UIKit.label("", 21, UIKit.GOLD)
 	cbox.add_child(city_title)
-	city_desc = UIKit.wrap_label("", 13, UIKit.DIM)
+	city_desc = UIKit.wrap_label("", 15, UIKit.DIM)
 	cbox.add_child(city_desc)
 	var grid: = UIKit.hbox(4)
 	for spec in [["kinh_te", "Kinh tế"], ["sx", "Sản xuất"], ["an_ninh", "An ninh"], ["giao_duc", "Giáo dục"]]:
 		var cv: = UIKit.vbox(0)
 		cv.size_flags_horizontal = Control.SIZE_EXPAND_FILL
-		var t: = UIKit.label(spec[1], 12, UIKit.DIM)
+		var t: = UIKit.label(spec[1], 14, UIKit.DIM)
 		t.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		cv.add_child(t)
-		var v: = UIKit.label("", 17, UIKit.TEXT)
+		var v: = UIKit.label("", 19, UIKit.TEXT)
 		v.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
 		cv.add_child(v)
 		city_cells[spec[0]] = v
 		grid.add_child(cv)
 	cbox.add_child(grid)
 	city_stats = UIKit.rich(true)
+	city_stats.add_theme_font_size_override("normal_font_size", 16)
 	cbox.add_child(city_stats)
 	city_btns = _flow()
 	cbox.add_child(city_btns)
-	left.add_child(UIKit.panel(cbox))
+	left.add_child(UIKit.panel(cbox, UIKit.PANEL, 6))
 	var lbox: = UIKit.vbox(4)
 	lbox.size_flags_vertical = Control.SIZE_EXPAND_FILL
-	lbox.add_child(UIKit.label("Nhật ký", 15, UIKit.GOLD))
+	lbox.add_child(UIKit.label("Nhật ký", 17, UIKit.GOLD))
 	log_txt = UIKit.rich()
-	log_txt.add_theme_font_size_override("normal_font_size", 13)
+	log_txt.add_theme_font_size_override("normal_font_size", 16)
 	lbox.add_child(log_txt)
-	var lp: = UIKit.panel(lbox)
+	var lp: = UIKit.panel(lbox, UIKit.PANEL, 6)
 	lp.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	left.add_child(lp)
 
@@ -161,7 +192,7 @@ func _build() -> void :
 	body.add_child(tabs)
 	var hbox: = UIKit.vbox(6)
 	var lrow: = UIKit.hbox(10)
-	leads_title = UIKit.label("", 15, UIKit.GOLD)
+	leads_title = UIKit.label("", 18, UIKit.GOLD)
 	leads_title.size_flags_vertical = Control.SIZE_SHRINK_CENTER
 	lrow.add_child(leads_title)
 	lrow.add_child(UIKit.spacer())
@@ -177,39 +208,41 @@ func _build() -> void :
 	leads_box.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	leads_scroll.add_child(leads_box)
 	hbox.add_child(leads_scroll)
-	known_title = UIKit.label("", 15, UIKit.GOLD)
+	known_title = UIKit.label("", 18, UIKit.GOLD)
 	hbox.add_child(known_title)
-	here_tree = _tree(["Tên", "Tuổi", "Thân phận", "Ghi chú"], [190, 45, 250, 150])
+	here_tree = _tree(["Tên", "Tuổi", "Thân phận", "Ghi chú"], [210, 55, 270, 180])
 	here_tree.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	hbox.add_child(here_tree)
 	_tab(hbox, "Tại đây")
-	book_tree = _tree(["Tên", "Tuổi", "Ở", "Thân phận", "Tiềm năng", "Thẩm định"], [170, 45, 85, 175, 95, 110])
+	book_tree = _tree(["Tên", "Tuổi", "Ở", "Thân phận", "Tiềm năng", "Thẩm định"], [190, 55, 100, 210, 120, 130])
 	var bbox: = UIKit.vbox(6)
-	bbox.add_child(UIKit.wrap_label("Sổ ghi chép của bạn: những người bạn đã gặp, kèm kết quả thẩm định gần nhất. Dùng để nhớ ai đáng quay lại, theo dõi viên ngọc thô lớn lên, so sánh trước khi chiêu mộ hay tiến cử. ★ Lưu tâm: người bạn tự ghim (bấm \"★ Lưu tâm\" trong hồ sơ). Tin tức về một người chỉ đến tai bạn khi họ là môn khách, hoặc ở cùng thành với bạn. Quan chức xem ở tab Triều đình.", 13, UIKit.DIM))
+	bbox.add_child(UIKit.wrap_label("Sổ ghi chép của bạn: những người bạn đã gặp, kèm kết quả thẩm định gần nhất. Dùng để nhớ ai đáng quay lại, theo dõi viên ngọc thô lớn lên, so sánh trước khi chiêu mộ hay tiến cử. ★ Lưu tâm: người bạn tự ghim (bấm \"★ Lưu tâm\" trong hồ sơ). Tin tức về một người chỉ đến tai bạn khi họ là môn khách, hoặc ở cùng thành với bạn. Quan chức xem ở tab Triều đình.", 16, UIKit.DIM))
 	book_tree.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	bbox.add_child(book_tree)
 	_tab(bbox, "Sổ nhân vật")
-	ret_tree = _tree(["Tên", "Tuổi", "Việc", "Lương", "Túi riêng", "Thực lực", "Thái độ"], [165, 38, 175, 48, 64, 80, 105])
+	ret_tree = _tree(["Tên", "Tuổi", "Việc", "Lương", "Túi riêng", "Thực lực", "Thái độ"], [180, 50, 190, 65, 85, 105, 120])
 	_tab(ret_tree, "Môn khách")
 	court_tabs = TabContainer.new()
 	court_tabs.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	_tab(court_tabs, "Triều đình")
 	news_txt = UIKit.rich()
+	news_txt.add_theme_font_size_override("normal_font_size", 18)
 	_tab(news_txt, "Tin tức")
-	clan_tree = _tree(["Thế gia", "Nước", "Quê", "Gia thế", "Quan hệ", "Trong triều", "Môn khách"], [120, 85, 85, 80, 120, 80, 80])
+	clan_tree = _tree(["Thế gia", "Nước", "Quê", "Gia thế", "Quan hệ", "Trong triều", "Môn khách"], [140, 95, 95, 95, 130, 95, 95])
 	var cbox2: = UIKit.vbox(6)
-	cbox2.add_child(UIKit.wrap_label("Các gia tộc khác cũng săn nhân tài, nuôi dạy rồi tiến cử, tranh ghế với bạn; có nhà còn dùng âm mưu. Bái phỏng để kết giao (quan hệ ≥ 50: liên minh, ≥ 70: có thể kết thông gia), hoặc dùng mưu với họ. Biết họ là hạng nhà nào phải bái phỏng hoặc cài nội gián.", 13, UIKit.DIM))
+	cbox2.add_child(UIKit.wrap_label("Các gia tộc khác cũng săn nhân tài, nuôi dạy rồi tiến cử, tranh ghế với bạn; có nhà còn dùng âm mưu. Bái phỏng để kết giao (quan hệ ≥ 50: liên minh, ≥ 70: có thể kết thông gia), hoặc dùng mưu với họ. Biết họ là hạng nhà nào phải bái phỏng hoặc cài nội gián.", 16, UIKit.DIM))
 	clan_tree.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	cbox2.add_child(clan_tree)
 	_tab(cbox2, "Thế gia")
 
 
 	var right: = UIKit.vbox(8)
-	right.custom_minimum_size.x = 470
+	right.custom_minimum_size.x = 400
 	body.add_child(right)
 	var dbox: = UIKit.vbox(6)
 	dbox.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	detail_txt = UIKit.rich()
+	detail_txt.add_theme_font_size_override("normal_font_size", 18)
 	detail_txt.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	dbox.add_child(detail_txt)
 	var drow: = UIKit.hbox(6)
@@ -217,16 +250,17 @@ func _build() -> void :
 	detail_btn = UIKit.button("Chi tiết…", func() -> void : _open_detail(), "Hồ sơ đầy đủ, chia tab")
 	drow.add_child(detail_btn)
 	dbox.add_child(drow)
-	var dp: = UIKit.panel(dbox)
+	var dp: = UIKit.panel(dbox, UIKit.PANEL, 6)
 	dp.size_flags_vertical = Control.SIZE_EXPAND_FILL
 	right.add_child(dp)
 	var abox: = UIKit.vbox(6)
 	hint_txt = UIKit.rich(true)
+	hint_txt.add_theme_font_size_override("normal_font_size", 17)
 	abox.add_child(hint_txt)
-	msg_lbl = UIKit.wrap_label("", 14, UIKit.GOLD)
+	msg_lbl = UIKit.wrap_label("", 17, UIKit.GOLD)
 	abox.add_child(msg_lbl)
 	eye_line = UIKit.hbox(8)
-	eye_head = UIKit.label("Thẩm định", 13, UIKit.DIM)
+	eye_head = UIKit.label("Thẩm định", 15, UIKit.DIM)
 	eye_head.custom_minimum_size.x = 76
 	eye_head.size_flags_vertical = Control.SIZE_SHRINK_BEGIN
 	eye_line.add_child(eye_head)
@@ -234,14 +268,14 @@ func _build() -> void :
 	eye_line.add_child(eye_box)
 	abox.add_child(eye_line)
 	var act_line: = UIKit.hbox(8)
-	var ah: = UIKit.label("Hành động", 13, UIKit.DIM)
+	var ah: = UIKit.label("Hành động", 15, UIKit.DIM)
 	ah.custom_minimum_size.x = 76
 	ah.size_flags_vertical = Control.SIZE_SHRINK_BEGIN
 	act_line.add_child(ah)
 	action_box = _flow()
 	act_line.add_child(action_box)
 	abox.add_child(act_line)
-	right.add_child(UIKit.panel(abox))
+	right.add_child(UIKit.panel(abox, UIKit.PANEL, 6))
 
 
 func _flow() -> HFlowContainer:
@@ -308,7 +342,7 @@ func _to_start() -> void :
 	main.show_menu()
 
 
-func _cell(parent: Control, key: String, title: String, size: int = 18) -> Control:
+func _cell(parent: Control, key: String, title: String, size: int = 20) -> Control:
 	var v: = UIKit.vbox(0)
 	v.size_flags_vertical = Control.SIZE_SHRINK_CENTER
 	if title != "":
@@ -474,14 +508,14 @@ func _top() -> void :
 	var inc: = float(w.play["last_income"])
 	var tier: = PlayerOps.eye_tier(w)
 	var nxt: = "" if tier >= 4 else " · %d/%d" % [int(w.play["ngo_dao"]), int(PlayerOps.TIER_UNLOCK[tier + 1])]
-	top_vals["date"].text = "%s\n%s" % [UIKit.col(World.date_cap(w.m), UIKit.GOLD), UIKit.col("[font_size=12]còn %d tháng[/font_size]" % (PlayerOps.end_m(w) - w.m), UIKit.DIM)]
+	top_vals["date"].text = "%s\n%s" % [UIKit.col(World.date_cap(w.m), UIKit.GOLD), UIKit.col("[font_size=14]còn %d tháng[/font_size]" % (PlayerOps.end_m(w) - w.m), UIKit.DIM)]
 	top_vals["here"].text = UIKit.col(w.city_name(PlayerOps.here(w)), UIKit.TEXT)
 	top_vals["ap"].text = UIKit.col("%d/%d" % [PlayerOps.day(w) + 1, PlayerOps.MONTH_DAYS], UIKit.GOLD)
 	top_vals["eye"].text = UIKit.col("%d/%d" % [int(w.play["eye"]), int(w.play["eye_max"])], UIKit.BLUE)
-	top_vals["money"].text = "%s %s" % [UIKit.col(str(roundi(PlayerOps.money(w))), UIKit.GOLD), UIKit.col("[font_size=12]%+d/th[/font_size]" % roundi(inc), UIKit.GREEN if inc >= 0.0 else UIKit.RED)]
+	top_vals["money"].text = "%s %s" % [UIKit.col(str(roundi(PlayerOps.money(w))), UIKit.GOLD), UIKit.col("[font_size=14]%+d/th[/font_size]" % roundi(inc), UIKit.GREEN if inc >= 0.0 else UIKit.RED)]
 	top_vals["prestige"].text = UIKit.col(str(roundi(PlayerOps.prestige(w))), UIKit.PURPLE)
 	top_vals["clan"].text = UIKit.col(PlayerOps.CLAN_TIER_NAMES[PlayerOps.clan_tier(w)], UIKit.TEXT)
-	top_vals["mat"].text = "%s%s" % [UIKit.col(Defs.TIER_NAMES[tier], UIKit.BLUE), UIKit.col("[font_size=12]%s[/font_size]" % nxt, UIKit.DIM)]
+	top_vals["mat"].text = "%s%s" % [UIKit.col(Defs.TIER_NAMES[tier], UIKit.BLUE), UIKit.col("[font_size=14]%s[/font_size]" % nxt, UIKit.DIM)]
 	var pn: = w.player().nation_id
 	var foes: Array = []
 	for wr in War.wars_of(w, pn):
@@ -813,7 +847,7 @@ func _npc_head(c: Character, extra: String = "") -> String:
 	var met: = PlayerOps.met_now(w, c)
 	var ret: = PlayerOps.is_retainer(w, c)
 	var age: = c.age(w.m) if c.alive else c.age(c.death_m)
-	var s: = "[font_size=22]%s[/font_size]  %s\n" % [UIKit.col(("★ " if PlayerOps.is_starred(w, c.id) else "") + c.name, UIKit.GOLD), UIKit.col("(%s, %d tuổi)" % ["Nữ" if c.female else "Nam", age], UIKit.DIM)]
+	var s: = "[font_size=24]%s[/font_size]  %s\n" % [UIKit.col(("★ " if PlayerOps.is_starred(w, c.id) else "") + c.name, UIKit.GOLD), UIKit.col("(%s, %d tuổi)" % ["Nữ" if c.female else "Nam", age], UIKit.DIM)]
 	var role: = _role_public(c)
 	if c.alive and c.office_key == "":
 		role = role.replace(ProfTree.title(c), _prof_bb(c.profession, c))
@@ -1802,7 +1836,7 @@ func _stat_explain(heads: Array) -> String:
 
 func _detail_self() -> void :
 	var p: = w.player()
-	var s: = "[font_size=22]%s[/font_size]  %s\n" % [UIKit.col(p.name, UIKit.GOLD), UIKit.col("(%d tuổi · vòng đời thứ %d)" % [p.age(w.m), w.life], UIKit.DIM)]
+	var s: = "[font_size=24]%s[/font_size]  %s\n" % [UIKit.col(p.name, UIKit.GOLD), UIKit.col("(%d tuổi · vòng đời thứ %d)" % [p.age(w.m), w.life], UIKit.DIM)]
 	s += "Mệnh cách %s · Ngộ tính %s\n" % [UIKit.col(p.destiny, UIKit.PURPLE), _ngo_bb(p.ngo)]
 	s += "%s · %s · Sức khỏe %s\n" % [w.clan["name"], PlayerOps.CLAN_TIER_NAMES[PlayerOps.clan_tier(w)], UIKit.col(str(roundi(p.health)), UIKit.GREEN if p.health >= 70.0 else UIKit.RED)]
 	if p.office_key != "":

@@ -8,6 +8,17 @@ const Sim: = preload("res://game/core/sim.gd")
 ## Bảng Điều Khiển Admin / Thiên Mệnh Toàn Năng cho Tuệ Nhãn
 ## Cho phép can thiệp toàn bộ tài nguyên, chỉ số nhân vật, môn khách, thành trì, thế giới và giao diện
 
+static func _add_tab(tabs: TabContainer, title: String, content: Control) -> void :
+	var scroll: = ScrollContainer.new()
+	scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED
+	scroll.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	scroll.size_flags_vertical = Control.SIZE_EXPAND_FILL
+	content.size_flags_horizontal = Control.SIZE_EXPAND_FILL
+	scroll.add_child(content)
+	tabs.add_child(scroll)
+	tabs.set_tab_title(tabs.get_tab_count() - 1, title)
+
+
 static func open(host: Control) -> void:
 	if host == null or not is_instance_valid(host):
 		return
@@ -27,8 +38,7 @@ static func open(host: Control) -> void:
 	# TAB 1: TÀI NGUYÊN & GIA TỘC
 	# ========================================================
 	var tab_res: = UIKit.vbox(10)
-	tabs.add_child(tab_res)
-	tabs.set_tab_title(0, "💰 Tài Nguyên")
+	_add_tab(tabs, "💰 Tài Nguyên", tab_res)
 
 	var res_info: = UIKit.label("Quản lý kho tàng, ngân lượng gia tộc, danh vọng và nhãn lực", 15, UIKit.DIM)
 	tab_res.add_child(res_info)
@@ -155,8 +165,7 @@ static func open(host: Control) -> void:
 	# TAB 2: NGƯỜI CHƠI & MÔN KHÁCH
 	# ========================================================
 	var tab_char: = UIKit.vbox(10)
-	tabs.add_child(tab_char)
-	tabs.set_tab_title(1, "⚡ Bản Thân & Môn Khách")
+	_add_tab(tabs, "⚡ Bản Thân & Môn Khách", tab_char)
 
 	tab_char.add_child(UIKit.label("Tăng cường sức mạnh bản thân người chơi:", 16, UIKit.GOLD))
 
@@ -268,8 +277,7 @@ static func open(host: Control) -> void:
 	# TAB 3: NHÂN VẬT ĐANG CHỌN
 	# ========================================================
 	var tab_sel: = UIKit.vbox(10)
-	tabs.add_child(tab_sel)
-	tabs.set_tab_title(2, "🎯 Nhân Vật Đang Chọn")
+	_add_tab(tabs, "🎯 Nhân Vật Đang Chọn", tab_sel)
 
 	var target_id: String = str(host.get("sel"))
 	var target_char: Character = w.ch(target_id)
@@ -344,8 +352,7 @@ static func open(host: Control) -> void:
 	# TAB 4: THÀNH TRÌ & DỊCH CHUYỂN
 	# ========================================================
 	var tab_world: = UIKit.vbox(10)
-	tabs.add_child(tab_world)
-	tabs.set_tab_title(3, "🗺️ Thành Trì & Bản Đồ")
+	_add_tab(tabs, "🗺️ Thành Trì & Bản Đồ", tab_world)
 
 	tab_world.add_child(UIKit.label("Dịch chuyển tức thời đến bất kỳ thành phố nào:", 16, UIKit.GOLD))
 
@@ -429,8 +436,7 @@ static func open(host: Control) -> void:
 	# TAB 5: SOI NGỌC THÔ & TÌM NHÂN TÀI
 	# ========================================================
 	var tab_find: = UIKit.vbox(10)
-	tabs.add_child(tab_find)
-	tabs.set_tab_title(4, "💎 Soi Ngọc Thô")
+	_add_tab(tabs, "💎 Soi Ngọc Thô", tab_find)
 
 	tab_find.add_child(UIKit.label("Thấu thị thiên tài & ngọc thô ẩn giấu trong thiên hạ:", 16, UIKit.GOLD))
 
