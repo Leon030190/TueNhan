@@ -192,6 +192,10 @@ export/android/debug_keystore_pass = "{KEYSTORE_PASS}"
     return rel_apk, dbg_apk
 
 def write_export_presets(rel_apk, dbg_apk):
+    dbg_clean = dbg_apk.replace('\\', '/')
+    rel_clean = rel_apk.replace('\\', '/')
+    ks_clean = os.path.abspath(KEYSTORE_PATH).replace('\\', '/')
+
     preset_content = f'''[preset.0]
 
 name="Android"
@@ -213,8 +217,8 @@ encrypt_directory=false
 
 [preset.0.options]
 
-custom_template/debug="{dbg_apk.replace('\\', '/')}"
-custom_template/release="{rel_apk.replace('\\', '/')}"
+custom_template/debug="{dbg_clean}"
+custom_template/release="{rel_clean}"
 gradle_build/use_gradle_build=false
 architectures/arm64-v8a=true
 architectures/armeabi-v7a=true
@@ -223,7 +227,7 @@ architectures/x86_64=true
 package/unique_name="com.tuenhan.thucanhhung"
 package/name="Tuệ Nhãn: Thức Anh Hùng"
 package/signed=true
-keystore/release="{os.path.abspath(KEYSTORE_PATH).replace('\\', '/')}"
+keystore/release="{ks_clean}"
 keystore/release_user="{KEYSTORE_ALIAS}"
 keystore/release_password="{KEYSTORE_PASS}"
 version/code=1
