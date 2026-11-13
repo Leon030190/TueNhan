@@ -1,5 +1,10 @@
 ; Engine configuration file.
-; Generated from project.binary deconstruction
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
 
 config_version=5
 
@@ -23,6 +28,11 @@ window/size/viewport_height=900
 window/size/mode=2
 window/stretch/mode="canvas_items"
 window/stretch/aspect="expand"
+
+[editor_overrides]
+
+text_editor/behavior/indent/type=0
+text_editor/behavior/indent/size=4
 
 [internationalization]
 

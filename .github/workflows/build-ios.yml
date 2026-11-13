@@ -5,9 +5,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - 'tools/build_godot_ios.py'
-      - '.github/workflows/build-ios.yml'
 
 permissions:
   contents: write
