@@ -4,6 +4,19 @@
 *.exe
 *.pck
 *.zip
+*.apk
+*.aab
+build_android/
+godot_bin/
+__pycache__/
+*.pyc
+
+# Godot Editor cache
+.godot/editor/
+.godot/imported/*.md5
+.godot/.gdignore
+.godot/uid_cache.bin
+.godot/exported/
 
 # Operating System files
 Thumbs.db
@@ -13,3 +26,5 @@ Desktop.ini
 # Temporary files
 *.tmp
 *.log
+
+
