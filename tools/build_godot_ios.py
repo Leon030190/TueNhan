@@ -65,12 +65,20 @@ def main():
         shutil.rmtree(framework_dest)
     shutil.copytree(framework_src, framework_dest)
 
-    # Thay thế $cpp_code trong dummy.cpp
+    # Thay thế $cpp_code trong dummy.cpp với các hàm khởi tạo plugin chuẩn của Godot
     dummy_cpp = os.path.join(work_dir, "godot_apple_embedded", "dummy.cpp")
     if os.path.exists(dummy_cpp):
         with open(dummy_cpp, "r", encoding="utf-8") as f:
             d_code = f.read()
-        d_code = d_code.replace("$cpp_code", "// No custom C++ modules")
+        cpp_impl = """
+// Godot Plugins
+void godot_apple_embedded_plugins_initialize() {
+}
+
+void godot_apple_embedded_plugins_deinitialize() {
+}
+"""
+        d_code = d_code.replace("$cpp_code", cpp_impl)
         with open(dummy_cpp, "w", encoding="utf-8") as f:
             f.write(d_code)
 
