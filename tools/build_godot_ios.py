@@ -99,15 +99,15 @@ def main():
         "$provisioning_profile_specifier_release": "",
         "$provisioning_profile_uuid_debug": "",
         "$provisioning_profile_uuid_release": "",
-        "$linker_flags": "-ObjC",
+        "$linker_flags": "-ObjC -framework Metal -framework MetalKit -framework QuartzCore -framework UIKit -framework Foundation -framework AudioToolbox -framework AVFoundation -framework CoreAudio -framework CoreMedia -framework CoreMotion -framework GameController",
         "$modules_buildfile": "",
         "$modules_buildgrp": "",
         "$modules_buildphase": "",
         "$modules_fileref": "",
-        "$moltenvk_buildfile": "",
-        "$moltenvk_buildgrp": "",
-        "$moltenvk_buildphase": "",
-        "$moltenvk_fileref": "",
+        "$moltenvk_buildfile": "9039D3BE24C093AC0020482C /* MoltenVK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9039D3BD24C093AC0020482C /* MoltenVK.xcframework */; };",
+        "$moltenvk_buildgrp": "9039D3BD24C093AC0020482C /* MoltenVK.xcframework */,",
+        "$moltenvk_buildphase": "9039D3BE24C093AC0020482C /* MoltenVK.xcframework in Frameworks */,",
+        "$moltenvk_fileref": "9039D3BD24C093AC0020482C /* MoltenVK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MoltenVK; path = MoltenVK.xcframework; sourceTree = \"<group>\"; };",
         "$additional_pbx_files": "",
         "$additional_pbx_frameworks_build": "",
         "$additional_pbx_frameworks_refs": "",
@@ -215,19 +215,31 @@ def main():
     shutil.copy2("TueNhan.pck", os.path.join(app_dest, "TueNhan.pck"))
     shutil.copy2("TueNhan.pck", os.path.join(app_dest, "data.pck"))
 
-    # Đổi tên file thực thi chính thành TueNhan và đồng bộ Info.plist
+    # Đảm bảo cả hai file thực thi godot_apple_embedded và TueNhan đều tồn tại và có quyền chạy
     binary_orig = os.path.join(app_dest, "godot_apple_embedded")
     binary_dest = os.path.join(app_dest, "TueNhan")
     if os.path.exists(binary_orig):
-        shutil.move(binary_orig, binary_dest)
+        shutil.copy2(binary_orig, binary_dest)
+        try:
+            os.chmod(binary_orig, 0o755)
+            os.chmod(binary_dest, 0o755)
+        except Exception:
+            pass
         
     final_plist = os.path.join(app_dest, "Info.plist")
     if os.path.exists(final_plist):
-        with open(final_plist, "r", encoding="utf-8") as f:
-            p_data = f.read()
-        p_data = p_data.replace("<string>godot_apple_embedded</string>", "<string>TueNhan</string>")
-        with open(final_plist, "w", encoding="utf-8") as f:
-            f.write(p_data)
+        try:
+            import plistlib
+            with open(final_plist, "rb") as f:
+                pl = plistlib.load(f)
+            pl["CFBundleExecutable"] = "TueNhan"
+            pl["CFBundleDisplayName"] = "Tuệ Nhãn"
+            pl["CFBundleName"] = "TueNhan"
+            with open(final_plist, "wb") as f:
+                plistlib.dump(pl, f)
+            print("Cập nhật Info.plist thành công!")
+        except Exception as e:
+            print(f"Cảnh báo cập nhật Info.plist: {e}")
 
     output_ipa = "TueNhan_Playable.ipa"
     print(f"Đang đóng gói {output_ipa}...")
@@ -237,7 +249,14 @@ def main():
             for fn in files:
                 full_p = os.path.join(root, fn)
                 rel_p = os.path.relpath(full_p, "build")
-                zip_f.write(full_p, rel_p.replace(os.sep, "/"))
+                zinfo = zipfile.ZipInfo.from_file(full_p, rel_p.replace(os.sep, "/"))
+                try:
+                    st = os.stat(full_p)
+                    zinfo.external_attr = (st.st_mode & 0xFFFF) << 16
+                except Exception:
+                    pass
+                with open(full_p, "rb") as f_in:
+                    zip_f.writestr(zinfo, f_in.read(), compress_type=zipfile.ZIP_DEFLATED)
 
     size_mb = os.path.getsize(output_ipa) / (1024 * 1024)
     print(f"Build thành công! File: {output_ipa} ({size_mb:.2f} MB)")
