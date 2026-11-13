@@ -1,0 +1,15 @@
+# Git ignore file for TueNhan repository
+
+# Large executables and raw packages (exceeding GitHub file limit or redundant)
+*.exe
+*.pck
+*.zip
+
+# Operating System files
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Temporary files
+*.tmp
+*.log

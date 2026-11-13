@@ -1,0 +1,220 @@
+[
+  {
+    "id": "can_cu",
+    "name": "Cần Cù",
+    "rarity": 0,
+    "growth": {
+      "all": 0.15
+    },
+    "desc": "Tăng trưởng mọi chỉ số +15%."
+  },
+  {
+    "id": "cuong_trang",
+    "name": "Cường Tráng",
+    "rarity": 0,
+    "desc": "Tuổi thọ +5 năm, giảm 30% nguy cơ trọng thương. Tiến hóa thành Bách Chiến Chi Thể sau 10 trận."
+  },
+  {
+    "id": "ham_hoc",
+    "name": "Ham Học",
+    "rarity": 0,
+    "growth": {
+      "tri": 0.25
+    },
+    "desc": "Tăng trưởng Trí lực +25%."
+  },
+  {
+    "id": "kheo_tay",
+    "name": "Khéo Tay",
+    "rarity": 0,
+    "pot": {
+      "sx": 5
+    },
+    "desc": "Tiềm năng Sản xuất +5. Hiếm khi tiến hóa thành Bách Công Chi Tổ."
+  },
+  {
+    "id": "lanh_loi",
+    "name": "Lanh Lợi",
+    "rarity": 0,
+    "pot": {
+      "thuong": 5
+    },
+    "desc": "Tiềm năng Thương nghiệp +5."
+  },
+  {
+    "id": "gan_da",
+    "name": "Gan Dạ",
+    "rarity": 0,
+    "pot": {
+      "vo": 3,
+      "quan": 3
+    },
+    "y_chi": 5,
+    "desc": "Tiềm năng Võ lực, Quân sự +3; Ý chí +5."
+  },
+  {
+    "id": "than_luc",
+    "name": "Thiên Sinh Thần Lực",
+    "rarity": 1,
+    "pot": {
+      "vo": 10
+    },
+    "desc": "Tiềm năng Võ lực +10. Tiến hóa thành Bách Chiến Chi Thể sau 10 trận."
+  },
+  {
+    "id": "kiem_dao",
+    "name": "Kiếm Đạo Thiên Tài",
+    "rarity": 1,
+    "pot": {
+      "vo": 8
+    },
+    "growth": {
+      "vo": 0.2
+    },
+    "desc": "Tiềm năng Võ lực +8, tăng trưởng Võ lực +20%. Có thể chuyển hóa thành Kiếm Tâm Minh Ngộ nếu con đường võ gãy đổ."
+  },
+  {
+    "id": "tai_chinh",
+    "name": "Tài Chính Thiên Tài",
+    "rarity": 1,
+    "pot": {
+      "thuong": 10
+    },
+    "desc": "Tiềm năng Thương nghiệp +10. Tiến hóa thành Kinh Thế Tài Lược sau 5 năm giữ chức Hộ bộ."
+  },
+  {
+    "id": "tam_co",
+    "name": "Tâm Cơ Thâm Trầm",
+    "rarity": 1,
+    "pot": {
+      "chinh": 8
+    },
+    "concealment": 30,
+    "desc": "Tiềm năng Chính trị +8; Ẩn tàng +30."
+  },
+  {
+    "id": "trung_thanh",
+    "name": "Trung Thành Tuyệt Đối",
+    "rarity": 1,
+    "desc": "Trung thành không bao giờ thấp hơn 70."
+  },
+  {
+    "id": "van_thanh",
+    "name": "Đại Khí Vãn Thành",
+    "rarity": 1,
+    "desc": "Tăng trưởng ×0,6 trước 30 tuổi, ×1,5 từ 30 tuổi."
+  },
+  {
+    "id": "bien_tai",
+    "name": "Biện Tài Vô Ngại",
+    "rarity": 1,
+    "role": {
+      "quan_van": 5
+    },
+    "desc": "Điểm Quan văn +5."
+  },
+  {
+    "id": "quan_than",
+    "name": "Quân Thần",
+    "rarity": 2,
+    "pot": {
+      "quan": 15
+    },
+    "role": {
+      "tuong": 5
+    },
+    "desc": "Tiềm năng Quân sự +15; Điểm Tướng lĩnh +5. Tiến hóa thành Binh Pháp Tông Sư khi Quân sự đạt 90."
+  },
+  {
+    "id": "bach_cong",
+    "name": "Bách Công Chi Tổ",
+    "rarity": 2,
+    "pot": {
+      "sx": 15
+    },
+    "role": {
+      "cong_tuong": 5
+    },
+    "desc": "Tiềm năng Sản xuất +15; Điểm Công tượng +5."
+  },
+  {
+    "id": "kiem_tam",
+    "name": "Kiếm Tâm Minh Ngộ",
+    "rarity": 2,
+    "spawn": false,
+    "pot": {
+      "tri": 15
+    },
+    "role": {
+      "quan_su": 8
+    },
+    "desc": "Thức tỉnh khi kiếm đạo gãy đổ. Tiềm năng Trí lực +15; Điểm Quân sư +8."
+  },
+  {
+    "id": "kinh_the",
+    "name": "Kinh Thế Tài Lược",
+    "rarity": 2,
+    "spawn": false,
+    "pot": {
+      "thuong": 8,
+      "chinh": 8
+    },
+    "role": {
+      "thuong_nhan": 8,
+      "quan_van": 4
+    },
+    "desc": "Tiềm năng Thương nghiệp, Chính trị +8."
+  },
+  {
+    "id": "thien_menh",
+    "name": "Thiên Mệnh Chi Tử",
+    "rarity": 3,
+    "desc": "Cơ duyên ×3; tiềm năng có thể vượt 100 (tối đa 120)."
+  },
+  {
+    "id": "yeu_menh",
+    "name": "Yểu Mệnh",
+    "rarity": 0,
+    "negative": true,
+    "desc": "Tuổi thọ chỉ khoảng 35–45."
+  },
+  {
+    "id": "do_ky",
+    "name": "Đố Kỵ",
+    "rarity": 0,
+    "negative": true,
+    "desc": "Trung thành giảm mạnh khi bị người khác thay thế."
+  },
+  {
+    "id": "bach_chien",
+    "name": "Bách Chiến Chi Thể",
+    "rarity": 2,
+    "spawn": false,
+    "pot": {
+      "vo": 5
+    },
+    "desc": "Thân thể tôi luyện qua trăm trận. Tiềm năng Võ lực +5; giảm 50% nguy cơ trọng thương."
+  },
+  {
+    "id": "tuc_tue",
+    "name": "Túc Tuệ",
+    "rarity": 3,
+    "spawn": false,
+    "desc": "Mang ký ức mơ hồ của kiếp trước: nhớ ân oán với bạn, có thể né những kiếp nạn đã từng gặp."
+  },
+  {
+    "id": "binh_phap",
+    "name": "Binh Pháp Tông Sư",
+    "rarity": 2,
+    "spawn": false,
+    "pot": {
+      "quan": 5,
+      "tri": 5
+    },
+    "role": {
+      "tuong": 8,
+      "quan_su": 8
+    },
+    "desc": "Điểm Tướng lĩnh, Quân sư +8."
+  }
+]

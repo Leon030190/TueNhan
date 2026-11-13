@@ -1,0 +1,1141 @@
+{
+  "player": {
+    "name": "Tô Minh Viễn",
+    "female": false,
+    "city": "lac_thuy",
+    "nation": "dai_ha",
+    "clan": "Tô gia",
+    "money": 1500,
+    "prestige": 20
+  },
+  "cities": [
+    {
+      "id": "thien_kinh",
+      "name": "Thiên Kinh",
+      "nation": "dai_ha",
+      "pos": [
+        0.52,
+        0.4
+      ],
+      "pop": 420000,
+      "kinh_te": 65,
+      "sx": 45,
+      "an_ninh": 70,
+      "quan_su": 55,
+      "giao_duc": 75,
+      "npc": 12,
+      "features": [],
+      "links": {
+        "lac_thuy": 1,
+        "van_chau": 1,
+        "binh_lang": 1,
+        "thanh_ha": 1,
+        "ngan_khe": 1
+      },
+      "desc": "Kinh đô Đại Hạ, nơi tập trung triều đình, quan lại và học viện."
+    },
+    {
+      "id": "lac_thuy",
+      "name": "Lạc Thủy",
+      "nation": "dai_ha",
+      "pos": [
+        0.66,
+        0.58
+      ],
+      "pop": 260000,
+      "kinh_te": 70,
+      "sx": 50,
+      "an_ninh": 55,
+      "quan_su": 35,
+      "giao_duc": 50,
+      "npc": 9,
+      "features": [
+        "cang"
+      ],
+      "links": {
+        "thien_kinh": 1,
+        "thanh_ha": 1,
+        "nam_phong": 1,
+        "hai_mon": 1,
+        "vong_hai": 2,
+        "ngan_khe": 1
+      },
+      "desc": "Thương cảng ven sông, bến thuyền tấp nập, có đường thủy ra biển Đông Hải. Quê nhà của Tô gia."
+    },
+    {
+      "id": "van_chau",
+      "name": "Vân Châu",
+      "nation": "dai_ha",
+      "pos": [
+        0.46,
+        0.25
+      ],
+      "pop": 220000,
+      "kinh_te": 40,
+      "sx": 65,
+      "an_ninh": 50,
+      "quan_su": 60,
+      "giao_duc": 40,
+      "npc": 9,
+      "features": [],
+      "links": {
+        "thien_kinh": 1,
+        "hac_thuy": 1,
+        "lang_cu": 2,
+        "binh_lang": 2
+      },
+      "desc": "Vựa lúa phía bắc, giáp biên giới Bắc Nguyên. Quân doanh đóng dày đặc."
+    },
+    {
+      "id": "binh_lang",
+      "name": "Bình Lăng",
+      "nation": "dai_ha",
+      "pos": [
+        0.34,
+        0.45
+      ],
+      "pop": 150000,
+      "kinh_te": 40,
+      "sx": 50,
+      "an_ninh": 55,
+      "quan_su": 70,
+      "giao_duc": 35,
+      "npc": 7,
+      "features": [
+        "cua_ai"
+      ],
+      "links": {
+        "thien_kinh": 1,
+        "van_chau": 2,
+        "kiem_mon": 1,
+        "bach_loc": 1
+      },
+      "desc": "Thành quan ải phía tây, cửa ngõ vào đất núi Tây Lăng. Bình Lăng quan chưa từng thất thủ."
+    },
+    {
+      "id": "thanh_ha",
+      "name": "Thanh Hà",
+      "nation": "dai_ha",
+      "pos": [
+        0.48,
+        0.58
+      ],
+      "pop": 200000,
+      "kinh_te": 50,
+      "sx": 55,
+      "an_ninh": 65,
+      "quan_su": 35,
+      "giao_duc": 70,
+      "npc": 8,
+      "features": [
+        "hoc_phu"
+      ],
+      "links": {
+        "thien_kinh": 1,
+        "lac_thuy": 1,
+        "nam_phong": 1,
+        "bach_loc": 1
+      },
+      "desc": "Đất văn vật bên sông Thanh, có Thanh Hà thư viện, nơi sĩ tử khắp nơi tìm về."
+    },
+    {
+      "id": "soc_phong",
+      "name": "Sóc Phong",
+      "nation": "bac_nguyen",
+      "pos": [
+        0.5,
+        0.07
+      ],
+      "pop": 300000,
+      "kinh_te": 40,
+      "sx": 40,
+      "an_ninh": 60,
+      "quan_su": 80,
+      "giao_duc": 30,
+      "npc": 9,
+      "features": [],
+      "links": {
+        "hac_thuy": 1,
+        "lang_cu": 1
+      },
+      "desc": "Vương đình của Bắc Nguyên giữa thảo nguyên, nơi kỵ binh tụ hội."
+    },
+    {
+      "id": "hac_thuy",
+      "name": "Hắc Thủy",
+      "nation": "bac_nguyen",
+      "pos": [
+        0.37,
+        0.15
+      ],
+      "pop": 140000,
+      "kinh_te": 30,
+      "sx": 45,
+      "an_ninh": 45,
+      "quan_su": 75,
+      "giao_duc": 25,
+      "npc": 6,
+      "features": [
+        "cua_ai"
+      ],
+      "links": {
+        "van_chau": 1,
+        "soc_phong": 1,
+        "bach_sa": 1
+      },
+      "desc": "Đồn biên bên dòng sông đen, chiến địa muôn đời giữa Bắc Nguyên và Đại Hạ."
+    },
+    {
+      "id": "lang_cu",
+      "name": "Lang Cư",
+      "nation": "bac_nguyen",
+      "pos": [
+        0.68,
+        0.13
+      ],
+      "pop": 120000,
+      "kinh_te": 35,
+      "sx": 40,
+      "an_ninh": 50,
+      "quan_su": 70,
+      "giao_duc": 20,
+      "npc": 6,
+      "features": [
+        "bai_ngua"
+      ],
+      "links": {
+        "van_chau": 2,
+        "soc_phong": 1,
+        "ho_thi": 1
+      },
+      "desc": "Đồng cỏ mênh mông phía đông thảo nguyên, nơi nuôi những đàn ngựa tốt nhất thiên hạ."
+    },
+    {
+      "id": "bach_sa",
+      "name": "Bạch Sa",
+      "nation": "bac_nguyen",
+      "pos": [
+        0.21,
+        0.14
+      ],
+      "pop": 90000,
+      "kinh_te": 55,
+      "sx": 30,
+      "an_ninh": 40,
+      "quan_su": 55,
+      "giao_duc": 20,
+      "npc": 5,
+      "features": [],
+      "links": {
+        "hac_thuy": 1,
+        "kiem_mon": 2,
+        "diem_tri": 1
+      },
+      "desc": "Ốc đảo giữa sa mạc trắng, trạm dừng của các đoàn buôn đi về phía tây."
+    },
+    {
+      "id": "thuong_son",
+      "name": "Thương Sơn",
+      "nation": "tay_lang",
+      "pos": [
+        0.1,
+        0.4
+      ],
+      "pop": 180000,
+      "kinh_te": 40,
+      "sx": 45,
+      "an_ninh": 60,
+      "quan_su": 70,
+      "giao_duc": 45,
+      "npc": 8,
+      "features": [
+        "vo_duong"
+      ],
+      "links": {
+        "kiem_mon": 1,
+        "thach_coc": 2,
+        "van_dinh": 1
+      },
+      "desc": "Kinh đô Tây Lăng tựa lưng núi Thương Sơn. Võ đường nhiều hơn học quán, người người luyện võ."
+    },
+    {
+      "id": "kiem_mon",
+      "name": "Kiếm Môn",
+      "nation": "tay_lang",
+      "pos": [
+        0.22,
+        0.32
+      ],
+      "pop": 90000,
+      "kinh_te": 30,
+      "sx": 40,
+      "an_ninh": 55,
+      "quan_su": 75,
+      "giao_duc": 30,
+      "npc": 6,
+      "features": [
+        "vo_duong",
+        "cua_ai"
+      ],
+      "links": {
+        "binh_lang": 1,
+        "bach_sa": 2,
+        "thuong_son": 1,
+        "van_dinh": 2
+      },
+      "desc": "Cửa ải hiểm trở giữa hai vách núi, có võ đường lâu đời nhất phía tây."
+    },
+    {
+      "id": "thach_coc",
+      "name": "Thạch Cốc",
+      "nation": "tay_lang",
+      "pos": [
+        0.15,
+        0.62
+      ],
+      "pop": 110000,
+      "kinh_te": 35,
+      "sx": 70,
+      "an_ninh": 45,
+      "quan_su": 50,
+      "giao_duc": 25,
+      "npc": 6,
+      "features": [
+        "mo_sat"
+      ],
+      "links": {
+        "thuong_son": 2,
+        "cam_giang": 1,
+        "tra_son": 1
+      },
+      "desc": "Thung lũng mỏ sắt, lò rèn đỏ lửa ngày đêm. Binh khí tốt nhất đều từ đây mà ra."
+    },
+    {
+      "id": "ngoc_cang",
+      "name": "Ngọc Cảng",
+      "nation": "nam_cam",
+      "pos": [
+        0.4,
+        0.91
+      ],
+      "pop": 280000,
+      "kinh_te": 80,
+      "sx": 55,
+      "an_ninh": 60,
+      "quan_su": 40,
+      "giao_duc": 55,
+      "npc": 9,
+      "features": [
+        "cang"
+      ],
+      "links": {
+        "cam_giang": 1,
+        "nam_phong": 1,
+        "hong_pho": 1
+      },
+      "desc": "Kinh đô Nam Cẩm bên bờ biển, thuyền buôn bốn phương đổ về."
+    },
+    {
+      "id": "nam_phong",
+      "name": "Nam Phong",
+      "nation": "nam_cam",
+      "pos": [
+        0.56,
+        0.78
+      ],
+      "pop": 160000,
+      "kinh_te": 55,
+      "sx": 70,
+      "an_ninh": 50,
+      "quan_su": 45,
+      "giao_duc": 40,
+      "npc": 7,
+      "features": [],
+      "links": {
+        "lac_thuy": 1,
+        "thanh_ha": 1,
+        "cam_giang": 1,
+        "ngoc_cang": 1,
+        "hong_pho": 1
+      },
+      "desc": "Đồng bằng phì nhiêu phía nam, cửa ngõ giữa Nam Cẩm và Đại Hạ."
+    },
+    {
+      "id": "cam_giang",
+      "name": "Cẩm Giang",
+      "nation": "nam_cam",
+      "pos": [
+        0.28,
+        0.77
+      ],
+      "pop": 140000,
+      "kinh_te": 65,
+      "sx": 60,
+      "an_ninh": 55,
+      "quan_su": 30,
+      "giao_duc": 45,
+      "npc": 7,
+      "features": [
+        "xuong_lua"
+      ],
+      "links": {
+        "thach_coc": 1,
+        "ngoc_cang": 1,
+        "nam_phong": 1,
+        "bach_loc": 1,
+        "tra_son": 1
+      },
+      "desc": "Bến sông dệt gấm, khung cửi rộn ràng. Gấm Cẩm Giang là của quý khắp thiên hạ."
+    },
+    {
+      "id": "vong_hai",
+      "name": "Vọng Hải",
+      "nation": "dong_hai",
+      "pos": [
+        0.87,
+        0.42
+      ],
+      "pop": 220000,
+      "kinh_te": 70,
+      "sx": 40,
+      "an_ninh": 60,
+      "quan_su": 50,
+      "giao_duc": 55,
+      "npc": 8,
+      "features": [
+        "cang"
+      ],
+      "links": {
+        "hai_mon": 1,
+        "bong_chau": 1,
+        "lac_thuy": 2,
+        "thanh_o": 1
+      },
+      "desc": "Kinh đô Đông Hải trên mỏm đá nhìn ra biển lớn. Thủy quân và sứ đoàn tấp nập."
+    },
+    {
+      "id": "hai_mon",
+      "name": "Hải Môn",
+      "nation": "dong_hai",
+      "pos": [
+        0.79,
+        0.26
+      ],
+      "pop": 130000,
+      "kinh_te": 55,
+      "sx": 40,
+      "an_ninh": 55,
+      "quan_su": 55,
+      "giao_duc": 40,
+      "npc": 6,
+      "features": [
+        "cang"
+      ],
+      "links": {
+        "lac_thuy": 1,
+        "vong_hai": 1,
+        "ngan_khe": 1,
+        "ho_thi": 1
+      },
+      "desc": "Cửa biển phía bắc Đông Hải, nối đường bộ với Đại Hạ và thảo nguyên."
+    },
+    {
+      "id": "bong_chau",
+      "name": "Bồng Châu",
+      "nation": "dong_hai",
+      "pos": [
+        0.88,
+        0.76
+      ],
+      "pop": 90000,
+      "kinh_te": 60,
+      "sx": 35,
+      "an_ninh": 50,
+      "quan_su": 40,
+      "giao_duc": 35,
+      "npc": 5,
+      "features": [
+        "cang"
+      ],
+      "links": {
+        "vong_hai": 1,
+        "hong_pho": 1,
+        "thanh_o": 1
+      },
+      "desc": "Đảo xa ngoài khơi, chỉ đi được bằng thuyền. Nơi giao thương với phương nam."
+    },
+    {
+      "id": "ngan_khe",
+      "name": "Ngân Khê",
+      "nation": "dai_ha",
+      "pos": [
+        0.63,
+        0.43
+      ],
+      "pop": 130000,
+      "kinh_te": 55,
+      "sx": 50,
+      "an_ninh": 65,
+      "quan_su": 40,
+      "giao_duc": 45,
+      "npc": 6,
+      "features": [
+        "tram_dich"
+      ],
+      "links": {
+        "thien_kinh": 1,
+        "lac_thuy": 1,
+        "hai_mon": 1
+      },
+      "desc": "Trấn sông giữa kinh đô và biển, trạm dịch lớn nhất Đại Hạ; tin tức bốn phương qua đây trước tiên."
+    },
+    {
+      "id": "bach_loc",
+      "name": "Bạch Lộc",
+      "nation": "dai_ha",
+      "pos": [
+        0.38,
+        0.66
+      ],
+      "pop": 120000,
+      "kinh_te": 45,
+      "sx": 55,
+      "an_ninh": 55,
+      "quan_su": 55,
+      "giao_duc": 50,
+      "npc": 6,
+      "features": [
+        "y_quan"
+      ],
+      "links": {
+        "binh_lang": 1,
+        "thanh_ha": 1,
+        "cam_giang": 1
+      },
+      "desc": "Thành biên phía nam giáp Nam Cẩm, có y quán danh tiếng chữa cả thương tích chiến trận."
+    },
+    {
+      "id": "diem_tri",
+      "name": "Diêm Trì",
+      "nation": "bac_nguyen",
+      "pos": [
+        0.07,
+        0.08
+      ],
+      "pop": 70000,
+      "kinh_te": 60,
+      "sx": 35,
+      "an_ninh": 40,
+      "quan_su": 45,
+      "giao_duc": 15,
+      "npc": 5,
+      "features": [
+        "tram_dich"
+      ],
+      "links": {
+        "bach_sa": 1,
+        "van_dinh": 2
+      },
+      "desc": "Hồ muối giữa đồng hoang, nơi đoàn buôn muối dừng chân và đổi tin."
+    },
+    {
+      "id": "ho_thi",
+      "name": "Hỗ Thị",
+      "nation": "bac_nguyen",
+      "pos": [
+        0.86,
+        0.09
+      ],
+      "pop": 80000,
+      "kinh_te": 65,
+      "sx": 30,
+      "an_ninh": 45,
+      "quan_su": 50,
+      "giao_duc": 20,
+      "npc": 5,
+      "features": [],
+      "links": {
+        "lang_cu": 1,
+        "hai_mon": 1
+      },
+      "desc": "Chợ biên đổi ngựa lấy muối biển với Đông Hải; người Bắc Nguyên và người biển chung sống."
+    },
+    {
+      "id": "van_dinh",
+      "name": "Vân Đỉnh",
+      "nation": "tay_lang",
+      "pos": [
+        0.05,
+        0.24
+      ],
+      "pop": 60000,
+      "kinh_te": 25,
+      "sx": 35,
+      "an_ninh": 65,
+      "quan_su": 65,
+      "giao_duc": 40,
+      "npc": 5,
+      "features": [
+        "vo_duong"
+      ],
+      "links": {
+        "diem_tri": 2,
+        "thuong_son": 1,
+        "kiem_mon": 2
+      },
+      "desc": "Võ đường trên đỉnh núi quanh năm mây phủ; muốn lên phải leo ba ngày đường đá."
+    },
+    {
+      "id": "tra_son",
+      "name": "Trà Sơn",
+      "nation": "nam_cam",
+      "pos": [
+        0.13,
+        0.84
+      ],
+      "pop": 90000,
+      "kinh_te": 50,
+      "sx": 55,
+      "an_ninh": 60,
+      "quan_su": 30,
+      "giao_duc": 45,
+      "npc": 5,
+      "features": [
+        "y_quan"
+      ],
+      "links": {
+        "thach_coc": 1,
+        "cam_giang": 1
+      },
+      "desc": "Đồi chè và vườn thuốc trên núi, thầy thuốc giỏi khắp phương nam đều qua đây học nghề."
+    },
+    {
+      "id": "hong_pho",
+      "name": "Hồng Phố",
+      "nation": "nam_cam",
+      "pos": [
+        0.68,
+        0.88
+      ],
+      "pop": 110000,
+      "kinh_te": 70,
+      "sx": 45,
+      "an_ninh": 50,
+      "quan_su": 35,
+      "giao_duc": 40,
+      "npc": 6,
+      "features": [
+        "cang"
+      ],
+      "links": {
+        "nam_phong": 1,
+        "ngoc_cang": 1,
+        "bong_chau": 1
+      },
+      "desc": "Cửa biển phía đông Nam Cẩm, thuyền buôn đi về các đảo Đông Hải."
+    },
+    {
+      "id": "thanh_o",
+      "name": "Thanh Ổ",
+      "nation": "dong_hai",
+      "pos": [
+        0.95,
+        0.59
+      ],
+      "pop": 70000,
+      "kinh_te": 55,
+      "sx": 55,
+      "an_ninh": 55,
+      "quan_su": 45,
+      "giao_duc": 30,
+      "npc": 5,
+      "features": [
+        "cang"
+      ],
+      "links": {
+        "vong_hai": 1,
+        "bong_chau": 1
+      },
+      "desc": "Đảo xưởng thuyền của thủy quân Đông Hải, gỗ lim chất cao như núi."
+    }
+  ],
+  "sea_links": [
+    [
+      "vong_hai",
+      "bong_chau"
+    ],
+    [
+      "lac_thuy",
+      "vong_hai"
+    ],
+    [
+      "hong_pho",
+      "bong_chau"
+    ],
+    [
+      "thanh_o",
+      "vong_hai"
+    ],
+    [
+      "thanh_o",
+      "bong_chau"
+    ]
+  ],
+  "nations": [
+    {
+      "id": "dai_ha",
+      "name": "Đại Hạ",
+      "capital": "thien_kinh",
+      "ruler": "Hạ Chiêu Đế",
+      "bias": [
+        "tri",
+        "chinh"
+      ],
+      "treasury": 6000,
+      "food": 4000,
+      "troops": 46000,
+      "quality": 1.0,
+      "stability": 62,
+      "base_income": 0,
+      "base_food": 0,
+      "factions": {
+        "thanh_luu": {
+          "name": "Thanh Lưu",
+          "pref": "civil",
+          "power": 55
+        },
+        "huan_quy": {
+          "name": "Huân Quý",
+          "pref": "military",
+          "power": 45
+        }
+      },
+      "label": [
+        0.565,
+        0.64
+      ],
+      "region": [
+        0.2692,
+        0.1286,
+        0.7308,
+        0.7814
+      ],
+      "region_ratio": "4:3"
+    },
+    {
+      "id": "bac_nguyen",
+      "name": "Bắc Nguyên",
+      "capital": "soc_phong",
+      "ruler": "Thác Bạt Hãn",
+      "bias": [
+        "vo",
+        "quan"
+      ],
+      "treasury": 3000,
+      "food": 2500,
+      "troops": 45000,
+      "quality": 1.1,
+      "stability": 58,
+      "base_income": 240,
+      "base_food": 250,
+      "factions": {
+        "vuong_dinh": {
+          "name": "Vương Đình",
+          "pref": "civil",
+          "power": 50
+        },
+        "thiet_ky": {
+          "name": "Thiết Kỵ",
+          "pref": "military",
+          "power": 50
+        }
+      },
+      "label": [
+        0.3,
+        0.05
+      ],
+      "region": [
+        0.0,
+        0.0,
+        0.9308,
+        0.4571
+      ],
+      "region_ratio": "16:9"
+    },
+    {
+      "id": "nam_cam",
+      "name": "Nam Cẩm",
+      "capital": "ngoc_cang",
+      "ruler": "Phương Cẩm Vương",
+      "bias": [
+        "thuong",
+        "sx"
+      ],
+      "treasury": 7000,
+      "food": 3000,
+      "troops": 26000,
+      "quality": 0.95,
+      "stability": 64,
+      "base_income": 60,
+      "base_food": 0,
+      "factions": {
+        "thuong_hoi": {
+          "name": "Thương Hội",
+          "pref": "civil",
+          "power": 60
+        },
+        "thuy_su": {
+          "name": "Thủy Sư",
+          "pref": "military",
+          "power": 40
+        }
+      },
+      "label": [
+        0.25,
+        0.95
+      ],
+      "region": [
+        0.0592,
+        0.5429,
+        0.7508,
+        1.0
+      ],
+      "region_ratio": "16:9"
+    },
+    {
+      "id": "tay_lang",
+      "name": "Tây Lăng",
+      "capital": "thuong_son",
+      "ruler": "Mạnh Sơn Hầu",
+      "bias": [
+        "vo",
+        "quan"
+      ],
+      "treasury": 3500,
+      "food": 2600,
+      "troops": 30000,
+      "quality": 1.15,
+      "stability": 60,
+      "base_income": 80,
+      "base_food": 60,
+      "factions": {
+        "vo_lam": {
+          "name": "Võ Lâm",
+          "pref": "military",
+          "power": 55
+        },
+        "ton_that": {
+          "name": "Tôn Thất",
+          "pref": "civil",
+          "power": 45
+        }
+      },
+      "label": [
+        0.075,
+        0.74
+      ],
+      "region": [
+        0.0,
+        0.1186,
+        0.2908,
+        0.7414
+      ],
+      "region_ratio": "3:4"
+    },
+    {
+      "id": "dong_hai",
+      "name": "Đông Hải",
+      "capital": "vong_hai",
+      "ruler": "Lâm Hải Vương",
+      "bias": [
+        "thuong",
+        "chinh"
+      ],
+      "treasury": 6500,
+      "food": 2200,
+      "troops": 22000,
+      "quality": 1.0,
+      "stability": 63,
+      "base_income": 80,
+      "base_food": 120,
+      "factions": {
+        "hai_thuong": {
+          "name": "Hải Thương",
+          "pref": "civil",
+          "power": 55
+        },
+        "thuy_quan": {
+          "name": "Thủy Quân",
+          "pref": "military",
+          "power": 45
+        }
+      },
+      "label": [
+        0.93,
+        0.3
+      ],
+      "region": [
+        0.7192,
+        0.1386,
+        1.0,
+        0.8814
+      ],
+      "region_ratio": "3:4"
+    }
+  ],
+  "relations": [
+    [
+      "dai_ha",
+      "bac_nguyen",
+      -30,
+      -35
+    ],
+    [
+      "dai_ha",
+      "nam_cam",
+      15,
+      10
+    ],
+    [
+      "bac_nguyen",
+      "nam_cam",
+      0,
+      -5
+    ],
+    [
+      "dai_ha",
+      "tay_lang",
+      0,
+      0
+    ],
+    [
+      "dai_ha",
+      "dong_hai",
+      10,
+      5
+    ],
+    [
+      "bac_nguyen",
+      "tay_lang",
+      -10,
+      -15
+    ],
+    [
+      "bac_nguyen",
+      "dong_hai",
+      0,
+      0
+    ],
+    [
+      "tay_lang",
+      "nam_cam",
+      5,
+      0
+    ],
+    [
+      "tay_lang",
+      "dong_hai",
+      0,
+      0
+    ],
+    [
+      "nam_cam",
+      "dong_hai",
+      -10,
+      -15
+    ]
+  ],
+  "special_npcs": [
+    {
+      "tag": "lam_van",
+      "note": "Ví dụ của GDD mục 6.6.D: kiếm tu có định mệnh bị phế tay vào tháng 7 năm 3.",
+      "name": "Lâm Vân",
+      "female": false,
+      "city": "van_chau",
+      "age": 24,
+      "profession": "kiem_khach",
+      "real": [
+        65,
+        42,
+        55,
+        20,
+        15,
+        10
+      ],
+      "pot": [
+        95,
+        60,
+        90,
+        35,
+        25,
+        20
+      ],
+      "ngo": 4,
+      "talents": [
+        "kiem_dao"
+      ],
+      "traits": [
+        "dung_cam",
+        "kieu_ngao"
+      ],
+      "y_chi": 75,
+      "tham_vong": 70,
+      "fame": 20,
+      "fate": [
+        {
+          "year": 3,
+          "month": 7,
+          "ev": "trong_thuong",
+          "sev": "phe",
+          "part": "tay"
+        }
+      ]
+    },
+    {
+      "tag": "khau_hac",
+      "note": "Kiểu Bàng Thống: tài trí tuyệt thế nhưng dung mạo xấu xí, ăn nói cộc cằn – triều đình hay chê.",
+      "name": "Khâu Hạc",
+      "female": false,
+      "city": "thien_kinh",
+      "age": 31,
+      "profession": "thu_sinh",
+      "real": [
+        12,
+        72,
+        58,
+        40,
+        15,
+        20
+      ],
+      "pot": [
+        25,
+        96,
+        90,
+        70,
+        30,
+        35
+      ],
+      "mi": [
+        9,
+        22
+      ],
+      "ngo": 5,
+      "talents": [
+        "ham_hoc"
+      ],
+      "traits": [
+        "kieu_ngao",
+        "khiem_ton"
+      ],
+      "y_chi": 70,
+      "tham_vong": 60,
+      "fame": 35
+    }
+  ],
+  "rivals": [
+    {
+      "id": "luc",
+      "name": "Lục gia",
+      "head": "Lục Trường Thanh",
+      "kind": "tinh_mat",
+      "nation": "dai_ha",
+      "city": "thanh_ha",
+      "tier": 1,
+      "prestige": 40,
+      "money": 900,
+      "rel": 5,
+      "desc": "Hàn môn đất Thanh Hà, nghèo mà tinh mắt; người họ chọn thường là ngọc thô chưa ai để ý."
+    },
+    {
+      "id": "thoi",
+      "name": "Thôi gia",
+      "head": "Thôi Diễn",
+      "kind": "kieu_ngao",
+      "nation": "dai_ha",
+      "city": "thien_kinh",
+      "tier": 3,
+      "prestige": 260,
+      "money": 7000,
+      "rel": -5,
+      "desc": "Danh môn lâu đời ở kinh đô, của cải như núi, chỉ chuộng người đã có danh tiếng."
+    },
+    {
+      "id": "ho_dien",
+      "name": "Hô Diên thị",
+      "head": "Hô Diên Liệt",
+      "kind": "vo_gia",
+      "nation": "bac_nguyen",
+      "city": "soc_phong",
+      "tier": 2,
+      "prestige": 150,
+      "money": 2500,
+      "rel": -15,
+      "desc": "Võ tộc thảo nguyên, gom dũng sĩ về dưới trướng, nhắm các ghế tướng của Bắc Nguyên."
+    },
+    {
+      "id": "vu_van",
+      "name": "Vũ Văn thị",
+      "head": "Vũ Văn Mục",
+      "kind": "gia_than",
+      "nation": "bac_nguyen",
+      "city": "hac_thuy",
+      "tier": 3,
+      "prestige": 240,
+      "money": 3000,
+      "rel": -10,
+      "desc": "Gia thần nhiều đời của vương đình, ít môn khách nhưng thạo đường ngang ngõ tắt trong triều."
+    },
+    {
+      "id": "dao",
+      "name": "Đào gia",
+      "head": "Đào Ngọc Lâm",
+      "kind": "thuong_gia",
+      "nation": "nam_cam",
+      "city": "ngoc_cang",
+      "tier": 2,
+      "prestige": 160,
+      "money": 9000,
+      "rel": 5,
+      "desc": "Đại thương gia cửa biển, lấy bạc mua người, mua cả ảnh hưởng trong triều Nam Cẩm."
+    },
+    {
+      "id": "mai",
+      "name": "Mai gia",
+      "head": "Mai Tố Vân",
+      "kind": "tinh_mat",
+      "nation": "nam_cam",
+      "city": "cam_giang",
+      "tier": 1,
+      "prestige": 50,
+      "money": 1200,
+      "rel": 0,
+      "desc": "Nhà dệt gấm Cẩm Giang, gia chủ là nữ, mắt nhìn người sắc như mắt nhìn tơ."
+    },
+    {
+      "id": "thach",
+      "name": "Thạch gia",
+      "head": "Thạch Trấn Nhạc",
+      "kind": "vo_gia",
+      "nation": "tay_lang",
+      "city": "thuong_son",
+      "tier": 2,
+      "prestige": 140,
+      "money": 1800,
+      "rel": -5,
+      "desc": "Chủ võ đường lớn nhất Thương Sơn, môn đồ khắp Tây Lăng."
+    },
+    {
+      "id": "tiet",
+      "name": "Tiết gia",
+      "head": "Tiết Hải Đường",
+      "kind": "gia_than",
+      "nation": "dong_hai",
+      "city": "vong_hai",
+      "tier": 2,
+      "prestige": 180,
+      "money": 4000,
+      "rel": 0,
+      "desc": "Thế gia ngoại giao của Đông Hải, đời nào cũng có người làm sứ thần, giỏi dùng mưu hơn dùng binh."
+    }
+  ]
+}

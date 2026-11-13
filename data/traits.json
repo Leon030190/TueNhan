@@ -1,0 +1,71 @@
+[
+  {
+    "id": "trung_hau",
+    "name": "Trung hậu",
+    "opposite": "gian_xao",
+    "loyalty": 10,
+    "desc": "Trung thành +10; khó phản bội."
+  },
+  {
+    "id": "gian_xao",
+    "name": "Gian xảo",
+    "opposite": "trung_hau",
+    "loyalty": -10,
+    "concealment": 15,
+    "desc": "Ẩn tàng +15; dễ trở mặt khi bất lợi."
+  },
+  {
+    "id": "kieu_ngao",
+    "name": "Kiêu ngạo",
+    "opposite": "khiem_ton",
+    "tham_vong": 10,
+    "desc": "Tham vọng +10; bất mãn khi chức vụ thấp hơn năng lực."
+  },
+  {
+    "id": "khiem_ton",
+    "name": "Khiêm tốn",
+    "opposite": "kieu_ngao",
+    "tham_vong": -10,
+    "desc": "Tham vọng −10; danh tiếng tăng chậm."
+  },
+  {
+    "id": "dung_cam",
+    "name": "Dũng cảm",
+    "opposite": "nhut_nhat",
+    "y_chi": 15,
+    "desc": "Ý chí +15; dễ bị thương trên chiến trường hơn."
+  },
+  {
+    "id": "nhut_nhat",
+    "name": "Nhút nhát",
+    "opposite": "dung_cam",
+    "y_chi": -15,
+    "desc": "Ý chí −15."
+  },
+  {
+    "id": "tham_tai",
+    "name": "Tham tài",
+    "opposite": "thanh_liem",
+    "desc": "Dễ chiêu mộ bằng tiền; dễ bị mua chuộc."
+  },
+  {
+    "id": "thanh_liem",
+    "name": "Thanh liêm",
+    "opposite": "tham_tai",
+    "role": {
+      "quan_van": 3
+    },
+    "desc": "Khó mua chuộc; Điểm Quan văn +3."
+  },
+  {
+    "id": "tham_vong",
+    "name": "Tham vọng",
+    "tham_vong": 30,
+    "desc": "Tham vọng +30."
+  },
+  {
+    "id": "an_dat",
+    "name": "Ẩn dật",
+    "desc": "Không màng danh lợi; danh tiếng gần như bằng 0. Viên ngọc ẩn điển hình."
+  }
+]

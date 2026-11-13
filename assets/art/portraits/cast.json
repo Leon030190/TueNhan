@@ -1,0 +1,1154 @@
+[
+ {
+  "sheet": "s1_004",
+  "row": 1,
+  "nation": "bac_nguyen",
+  "sex": "m",
+  "prof": "herder",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s1_004",
+  "row": 2,
+  "nation": "dai_ha",
+  "sex": "m",
+  "prof": "soldier",
+  "look": "strikingly handsome"
+ },
+ {
+  "sheet": "s1_004",
+  "row": 3,
+  "nation": "dai_ha",
+  "sex": "f",
+  "prof": "fisherwoman",
+  "look": "strikingly handsome"
+ },
+ {
+  "sheet": "s1_005",
+  "row": 1,
+  "nation": "dai_ha",
+  "sex": "m",
+  "prof": "scholar",
+  "look": "strikingly handsome"
+ },
+ {
+  "sheet": "s1_005",
+  "row": 2,
+  "nation": "bac_nguyen",
+  "sex": "m",
+  "prof": "small trader",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s1_005",
+  "row": 3,
+  "nation": "dai_ha",
+  "sex": "f",
+  "prof": "noble lady",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s1_006",
+  "row": 1,
+  "nation": "bac_nguyen",
+  "sex": "m",
+  "prof": "small trader",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s1_006",
+  "row": 2,
+  "nation": "dai_ha",
+  "sex": "m",
+  "prof": "craftsman",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s1_006",
+  "row": 3,
+  "nation": "dai_ha",
+  "sex": "f",
+  "prof": "small trader",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s1_007",
+  "row": 1,
+  "nation": "dai_ha",
+  "sex": "m",
+  "prof": "soldier",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s1_007",
+  "row": 2,
+  "nation": "dai_ha",
+  "sex": "m",
+  "prof": "craftsman",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s1_007",
+  "row": 3,
+  "nation": "dai_ha",
+  "sex": "f",
+  "prof": "martial artist",
+  "look": "strikingly handsome"
+ },
+ {
+  "sheet": "s1_008",
+  "row": 1,
+  "nation": "dai_ha",
+  "sex": "m",
+  "prof": "physician",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s1_008",
+  "row": 2,
+  "nation": "bac_nguyen",
+  "sex": "m",
+  "prof": "porter",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s1_008",
+  "row": 3,
+  "nation": "dai_ha",
+  "sex": "f",
+  "prof": "small trader",
+  "look": "strikingly handsome"
+ },
+ {
+  "sheet": "s1_009",
+  "row": 1,
+  "nation": "dai_ha",
+  "sex": "m",
+  "prof": "wandering swordsman",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s1_009",
+  "row": 2,
+  "nation": "dai_ha",
+  "sex": "m",
+  "prof": "scholar",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s1_009",
+  "row": 3,
+  "nation": "dai_ha",
+  "sex": "f",
+  "prof": "small trader",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s1_010",
+  "row": 1,
+  "nation": "dai_ha",
+  "sex": "m",
+  "prof": "scholar",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s1_010",
+  "row": 2,
+  "nation": "bac_nguyen",
+  "sex": "m",
+  "prof": "civil official",
+  "look": "strikingly handsome"
+ },
+ {
+  "sheet": "s1_010",
+  "row": 3,
+  "nation": "bac_nguyen",
+  "sex": "f",
+  "prof": "small trader",
+  "look": "strikingly handsome"
+ },
+ {
+  "sheet": "s1_011",
+  "row": 1,
+  "nation": "dai_ha",
+  "sex": "m",
+  "prof": "military officer",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s1_011",
+  "row": 2,
+  "nation": "bac_nguyen",
+  "sex": "m",
+  "prof": "rich merchant",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s1_011",
+  "row": 3,
+  "nation": "bac_nguyen",
+  "sex": "f",
+  "prof": "rich merchant",
+  "look": "strikingly handsome"
+ },
+ {
+  "sheet": "s1_012",
+  "row": 1,
+  "nation": "bac_nguyen",
+  "sex": "m",
+  "prof": "farmer",
+  "look": "strikingly handsome"
+ },
+ {
+  "sheet": "s1_012",
+  "row": 2,
+  "nation": "dai_ha",
+  "sex": "m",
+  "prof": "martial artist",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s1_012",
+  "row": 3,
+  "nation": "dai_ha",
+  "sex": "f",
+  "prof": "weaver",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s1_013",
+  "row": 1,
+  "nation": "bac_nguyen",
+  "sex": "m",
+  "prof": "civil official",
+  "look": "strikingly handsome"
+ },
+ {
+  "sheet": "s1_013",
+  "row": 2,
+  "nation": "dai_ha",
+  "sex": "m",
+  "prof": "scholar",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s1_013",
+  "row": 3,
+  "nation": "dai_ha",
+  "sex": "f",
+  "prof": "martial artist",
+  "look": "strikingly handsome"
+ },
+ {
+  "sheet": "s1_014",
+  "row": 1,
+  "nation": "dai_ha",
+  "sex": "m",
+  "prof": "rich merchant",
+  "look": "strikingly handsome"
+ },
+ {
+  "sheet": "s1_014",
+  "row": 2,
+  "nation": "dai_ha",
+  "sex": "m",
+  "prof": "soldier",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s1_014",
+  "row": 3,
+  "nation": "bac_nguyen",
+  "sex": "f",
+  "prof": "rich merchant",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s1_015",
+  "row": 1,
+  "nation": "bac_nguyen",
+  "sex": "m",
+  "prof": "soldier",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s1_015",
+  "row": 2,
+  "nation": "dai_ha",
+  "sex": "m",
+  "prof": "martial artist",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s1_015",
+  "row": 3,
+  "nation": "bac_nguyen",
+  "sex": "f",
+  "prof": "weaver",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s1_016",
+  "row": 1,
+  "nation": "dai_ha",
+  "sex": "m",
+  "prof": "retired old official",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s1_016",
+  "row": 2,
+  "nation": "bac_nguyen",
+  "sex": "m",
+  "prof": "military officer",
+  "look": "strikingly handsome"
+ },
+ {
+  "sheet": "s1_016",
+  "row": 3,
+  "nation": "dai_ha",
+  "sex": "f",
+  "prof": "small trader",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s1_017",
+  "row": 1,
+  "nation": "dai_ha",
+  "sex": "m",
+  "prof": "farmer",
+  "look": "strikingly handsome"
+ },
+ {
+  "sheet": "s1_017",
+  "row": 2,
+  "nation": "dai_ha",
+  "sex": "m",
+  "prof": "physician",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s1_017",
+  "row": 3,
+  "nation": "dai_ha",
+  "sex": "f",
+  "prof": "martial artist",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s1_018",
+  "row": 1,
+  "nation": "dai_ha",
+  "sex": "m",
+  "prof": "soldier",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s1_018",
+  "row": 2,
+  "nation": "dai_ha",
+  "sex": "m",
+  "prof": "young noble",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s1_018",
+  "row": 3,
+  "nation": "bac_nguyen",
+  "sex": "f",
+  "prof": "fisherwoman",
+  "look": "strikingly handsome"
+ },
+ {
+  "sheet": "s1_019",
+  "row": 1,
+  "nation": "bac_nguyen",
+  "sex": "m",
+  "prof": "small trader",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s1_019",
+  "row": 2,
+  "nation": "dai_ha",
+  "sex": "m",
+  "prof": "civil official",
+  "look": "strikingly handsome"
+ },
+ {
+  "sheet": "s1_019",
+  "row": 3,
+  "nation": "dai_ha",
+  "sex": "f",
+  "prof": "fisherwoman",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s1_020",
+  "row": 1,
+  "nation": "bac_nguyen",
+  "sex": "m",
+  "prof": "craftsman",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s1_020",
+  "row": 2,
+  "nation": "bac_nguyen",
+  "sex": "m",
+  "prof": "farmer",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s1_020",
+  "row": 3,
+  "nation": "dai_ha",
+  "sex": "f",
+  "prof": "small trader",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s1_021",
+  "row": 1,
+  "nation": "dai_ha",
+  "sex": "m",
+  "prof": "retired old official",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s1_021",
+  "row": 2,
+  "nation": "dai_ha",
+  "sex": "m",
+  "prof": "small trader",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s1_021",
+  "row": 3,
+  "nation": "dai_ha",
+  "sex": "f",
+  "prof": "wandering swordswoman",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s1_022",
+  "row": 1,
+  "nation": "bac_nguyen",
+  "sex": "m",
+  "prof": "farmer",
+  "look": "strikingly handsome"
+ },
+ {
+  "sheet": "s1_022",
+  "row": 2,
+  "nation": "bac_nguyen",
+  "sex": "m",
+  "prof": "military officer",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s1_022",
+  "row": 3,
+  "nation": "bac_nguyen",
+  "sex": "f",
+  "prof": "rich merchant",
+  "look": "strikingly handsome"
+ },
+ {
+  "sheet": "s1_023",
+  "row": 1,
+  "nation": "dai_ha",
+  "sex": "m",
+  "prof": "young noble",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s1_023",
+  "row": 2,
+  "nation": "dai_ha",
+  "sex": "m",
+  "prof": "porter",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s1_023",
+  "row": 3,
+  "nation": "bac_nguyen",
+  "sex": "f",
+  "prof": "rich merchant",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s1_024",
+  "row": 1,
+  "nation": "bac_nguyen",
+  "sex": "m",
+  "prof": "craftsman",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s1_024",
+  "row": 2,
+  "nation": "dai_ha",
+  "sex": "m",
+  "prof": "soldier",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s1_024",
+  "row": 3,
+  "nation": "bac_nguyen",
+  "sex": "f",
+  "prof": "scholar's daughter",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s1_025",
+  "row": 1,
+  "nation": "dai_ha",
+  "sex": "m",
+  "prof": "civil official",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s1_025",
+  "row": 2,
+  "nation": "bac_nguyen",
+  "sex": "m",
+  "prof": "rich merchant",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s1_025",
+  "row": 3,
+  "nation": "bac_nguyen",
+  "sex": "f",
+  "prof": "small trader",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s1_026",
+  "row": 1,
+  "nation": "bac_nguyen",
+  "sex": "m",
+  "prof": "scholar",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s1_026",
+  "row": 2,
+  "nation": "dai_ha",
+  "sex": "m",
+  "prof": "scholar",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s1_026",
+  "row": 3,
+  "nation": "dai_ha",
+  "sex": "f",
+  "prof": "innkeeper",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s1_027",
+  "row": 1,
+  "nation": "bac_nguyen",
+  "sex": "m",
+  "prof": "craftsman",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s1_027",
+  "row": 2,
+  "nation": "dai_ha",
+  "sex": "m",
+  "prof": "civil official",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s1_027",
+  "row": 3,
+  "nation": "dai_ha",
+  "sex": "f",
+  "prof": "fisherwoman",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s2_001",
+  "row": 1,
+  "nation": "tay_lang",
+  "sex": "m",
+  "prof": "small trader",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s2_001",
+  "row": 2,
+  "nation": "nam_cam",
+  "sex": "m",
+  "prof": "civil official",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s2_001",
+  "row": 3,
+  "nation": "dong_hai",
+  "sex": "f",
+  "prof": "martial artist",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s2_002",
+  "row": 1,
+  "nation": "nam_cam",
+  "sex": "m",
+  "prof": "retired old official",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s2_002",
+  "row": 2,
+  "nation": "nam_cam",
+  "sex": "m",
+  "prof": "civil official",
+  "look": "strikingly handsome"
+ },
+ {
+  "sheet": "s2_002",
+  "row": 3,
+  "nation": "dong_hai",
+  "sex": "f",
+  "prof": "small trader",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s2_003",
+  "row": 1,
+  "nation": "tay_lang",
+  "sex": "m",
+  "prof": "porter",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s2_003",
+  "row": 2,
+  "nation": "tay_lang",
+  "sex": "m",
+  "prof": "farmer",
+  "look": "strikingly handsome"
+ },
+ {
+  "sheet": "s2_003",
+  "row": 3,
+  "nation": "nam_cam",
+  "sex": "f",
+  "prof": "small trader",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s2_004",
+  "row": 1,
+  "nation": "dong_hai",
+  "sex": "m",
+  "prof": "craftsman",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s2_004",
+  "row": 2,
+  "nation": "nam_cam",
+  "sex": "m",
+  "prof": "rich merchant",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s2_004",
+  "row": 3,
+  "nation": "tay_lang",
+  "sex": "f",
+  "prof": "weaver",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s2_005",
+  "row": 1,
+  "nation": "dong_hai",
+  "sex": "m",
+  "prof": "soldier",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s2_005",
+  "row": 2,
+  "nation": "nam_cam",
+  "sex": "m",
+  "prof": "civil official",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s2_005",
+  "row": 3,
+  "nation": "nam_cam",
+  "sex": "f",
+  "prof": "weaver",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s2_006",
+  "row": 1,
+  "nation": "nam_cam",
+  "sex": "m",
+  "prof": "fisherman",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s2_006",
+  "row": 2,
+  "nation": "dong_hai",
+  "sex": "m",
+  "prof": "craftsman",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s2_006",
+  "row": 3,
+  "nation": "dong_hai",
+  "sex": "f",
+  "prof": "innkeeper",
+  "look": "strikingly handsome"
+ },
+ {
+  "sheet": "s2_007",
+  "row": 1,
+  "nation": "dong_hai",
+  "sex": "m",
+  "prof": "fisherman",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s2_007",
+  "row": 2,
+  "nation": "nam_cam",
+  "sex": "m",
+  "prof": "soldier",
+  "look": "strikingly handsome"
+ },
+ {
+  "sheet": "s2_007",
+  "row": 3,
+  "nation": "tay_lang",
+  "sex": "f",
+  "prof": "scholar's daughter",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s2_008",
+  "row": 1,
+  "nation": "nam_cam",
+  "sex": "m",
+  "prof": "civil official",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s2_008",
+  "row": 2,
+  "nation": "tay_lang",
+  "sex": "m",
+  "prof": "small trader",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s2_008",
+  "row": 3,
+  "nation": "dong_hai",
+  "sex": "f",
+  "prof": "herbalist",
+  "look": "strikingly handsome"
+ },
+ {
+  "sheet": "s2_009",
+  "row": 1,
+  "nation": "nam_cam",
+  "sex": "m",
+  "prof": "physician",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s2_009",
+  "row": 2,
+  "nation": "dong_hai",
+  "sex": "m",
+  "prof": "civil official",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s2_009",
+  "row": 3,
+  "nation": "tay_lang",
+  "sex": "f",
+  "prof": "farmer",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s2_010",
+  "row": 1,
+  "nation": "nam_cam",
+  "sex": "m",
+  "prof": "scholar",
+  "look": "strikingly handsome"
+ },
+ {
+  "sheet": "s2_010",
+  "row": 2,
+  "nation": "dong_hai",
+  "sex": "m",
+  "prof": "scholar",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s2_010",
+  "row": 3,
+  "nation": "tay_lang",
+  "sex": "f",
+  "prof": "palace attendant",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s2_011",
+  "row": 1,
+  "nation": "nam_cam",
+  "sex": "m",
+  "prof": "civil official",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s2_011",
+  "row": 2,
+  "nation": "nam_cam",
+  "sex": "m",
+  "prof": "soldier",
+  "look": "strikingly handsome"
+ },
+ {
+  "sheet": "s2_011",
+  "row": 3,
+  "nation": "nam_cam",
+  "sex": "f",
+  "prof": "weaver",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s2_012",
+  "row": 1,
+  "nation": "dong_hai",
+  "sex": "m",
+  "prof": "young noble",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s2_012",
+  "row": 2,
+  "nation": "dong_hai",
+  "sex": "m",
+  "prof": "fisherman",
+  "look": "strikingly handsome"
+ },
+ {
+  "sheet": "s2_012",
+  "row": 3,
+  "nation": "tay_lang",
+  "sex": "f",
+  "prof": "scholar's daughter",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s2_013",
+  "row": 1,
+  "nation": "nam_cam",
+  "sex": "m",
+  "prof": "soldier",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s2_013",
+  "row": 2,
+  "nation": "tay_lang",
+  "sex": "m",
+  "prof": "porter",
+  "look": "strikingly handsome"
+ },
+ {
+  "sheet": "s2_013",
+  "row": 3,
+  "nation": "nam_cam",
+  "sex": "f",
+  "prof": "small trader",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s2_014",
+  "row": 1,
+  "nation": "dong_hai",
+  "sex": "m",
+  "prof": "young noble",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s2_014",
+  "row": 2,
+  "nation": "dong_hai",
+  "sex": "m",
+  "prof": "military officer",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s2_014",
+  "row": 3,
+  "nation": "nam_cam",
+  "sex": "f",
+  "prof": "weaver",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s2_015",
+  "row": 1,
+  "nation": "dong_hai",
+  "sex": "m",
+  "prof": "sailor",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s2_015",
+  "row": 2,
+  "nation": "tay_lang",
+  "sex": "m",
+  "prof": "farmer",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s2_015",
+  "row": 3,
+  "nation": "tay_lang",
+  "sex": "f",
+  "prof": "rich merchant",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s2_016",
+  "row": 1,
+  "nation": "nam_cam",
+  "sex": "m",
+  "prof": "scholar",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s2_016",
+  "row": 2,
+  "nation": "dong_hai",
+  "sex": "m",
+  "prof": "fisherman",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s2_016",
+  "row": 3,
+  "nation": "tay_lang",
+  "sex": "f",
+  "prof": "palace attendant",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s2_017",
+  "row": 1,
+  "nation": "nam_cam",
+  "sex": "m",
+  "prof": "fisherman",
+  "look": "strikingly handsome"
+ },
+ {
+  "sheet": "s2_017",
+  "row": 2,
+  "nation": "nam_cam",
+  "sex": "m",
+  "prof": "clerk",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s2_017",
+  "row": 3,
+  "nation": "nam_cam",
+  "sex": "f",
+  "prof": "small trader",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s2_018",
+  "row": 1,
+  "nation": "tay_lang",
+  "sex": "m",
+  "prof": "miner",
+  "look": "strikingly handsome"
+ },
+ {
+  "sheet": "s2_018",
+  "row": 2,
+  "nation": "dong_hai",
+  "sex": "m",
+  "prof": "clerk",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s2_018",
+  "row": 3,
+  "nation": "nam_cam",
+  "sex": "f",
+  "prof": "scholar's daughter",
+  "look": "strikingly handsome"
+ },
+ {
+  "sheet": "s2_019",
+  "row": 1,
+  "nation": "tay_lang",
+  "sex": "m",
+  "prof": "craftsman",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s2_019",
+  "row": 2,
+  "nation": "dong_hai",
+  "sex": "m",
+  "prof": "physician",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s2_019",
+  "row": 3,
+  "nation": "tay_lang",
+  "sex": "f",
+  "prof": "small trader",
+  "look": "strikingly handsome"
+ },
+ {
+  "sheet": "s2_020",
+  "row": 1,
+  "nation": "tay_lang",
+  "sex": "m",
+  "prof": "porter",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s2_020",
+  "row": 2,
+  "nation": "dong_hai",
+  "sex": "m",
+  "prof": "military officer",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s2_020",
+  "row": 3,
+  "nation": "dong_hai",
+  "sex": "f",
+  "prof": "weaver",
+  "look": "strikingly handsome"
+ },
+ {
+  "sheet": "s2_021",
+  "row": 1,
+  "nation": "nam_cam",
+  "sex": "m",
+  "prof": "porter",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s2_021",
+  "row": 2,
+  "nation": "nam_cam",
+  "sex": "m",
+  "prof": "martial artist",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s2_021",
+  "row": 3,
+  "nation": "tay_lang",
+  "sex": "f",
+  "prof": "rich merchant",
+  "look": "strikingly handsome"
+ },
+ {
+  "sheet": "s2_022",
+  "row": 1,
+  "nation": "nam_cam",
+  "sex": "m",
+  "prof": "farmer",
+  "look": "strikingly handsome"
+ },
+ {
+  "sheet": "s2_022",
+  "row": 2,
+  "nation": "tay_lang",
+  "sex": "m",
+  "prof": "hunter",
+  "look": "strikingly handsome"
+ },
+ {
+  "sheet": "s2_022",
+  "row": 3,
+  "nation": "tay_lang",
+  "sex": "f",
+  "prof": "small trader",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s2_023",
+  "row": 1,
+  "nation": "dong_hai",
+  "sex": "m",
+  "prof": "physician",
+  "look": "plain and coarse"
+ },
+ {
+  "sheet": "s2_023",
+  "row": 2,
+  "nation": "nam_cam",
+  "sex": "m",
+  "prof": "porter",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s2_023",
+  "row": 3,
+  "nation": "nam_cam",
+  "sex": "f",
+  "prof": "martial artist",
+  "look": "strikingly handsome"
+ },
+ {
+  "sheet": "s2_024",
+  "row": 1,
+  "nation": "tay_lang",
+  "sex": "m",
+  "prof": "martial artist",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s2_024",
+  "row": 2,
+  "nation": "tay_lang",
+  "sex": "m",
+  "prof": "craftsman",
+  "look": "ordinary"
+ },
+ {
+  "sheet": "s2_024",
+  "row": 3,
+  "nation": "nam_cam",
+  "sex": "f",
+  "prof": "wandering swordswoman",
+  "look": "plain and coarse"
+ }
+]

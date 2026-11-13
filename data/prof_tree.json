@@ -1,0 +1,1052 @@
+{
+  "nong_dan": {
+    "r2": [
+      {
+        "id": "lao_nong",
+        "name": "Lão nông",
+        "stat": 4
+      },
+      {
+        "id": "lai_lua",
+        "name": "Lái lúa",
+        "stat": 5
+      },
+      {
+        "id": "huong_dung",
+        "name": "Hương dũng",
+        "stat": 0
+      },
+      {
+        "id": "trum_phuong",
+        "name": "Trùm phường",
+        "stat": 3
+      }
+    ],
+    "r3": [
+      {
+        "id": "tri_dien",
+        "name": "Lão nông tri điền",
+        "stat": 4,
+        "from": [
+          "lao_nong",
+          "trum_phuong"
+        ]
+      },
+      {
+        "id": "lai_thoc",
+        "name": "Lái buôn thóc",
+        "stat": 5,
+        "from": [
+          "lai_lua"
+        ]
+      },
+      {
+        "id": "dau_muc_huong",
+        "name": "Đầu mục hương binh",
+        "stat": 2,
+        "from": [
+          "huong_dung"
+        ]
+      }
+    ],
+    "r4": [
+      {
+        "id": "nong_su",
+        "name": "Nông sư",
+        "stat": 1,
+        "from": [
+          "tri_dien",
+          "lai_thoc"
+        ]
+      },
+      {
+        "id": "thu_linh_dan",
+        "name": "Thủ lĩnh dân binh",
+        "stat": 2,
+        "from": [
+          "dau_muc_huong"
+        ]
+      }
+    ]
+  },
+  "ngu_dan": {
+    "r2": [
+      {
+        "id": "lao_ngu",
+        "name": "Lão ngư",
+        "stat": 4
+      },
+      {
+        "id": "lai_ca",
+        "name": "Lái cá",
+        "stat": 5
+      },
+      {
+        "id": "tho_lan",
+        "name": "Thợ lặn",
+        "stat": 0
+      },
+      {
+        "id": "trum_van",
+        "name": "Trùm vạn chài",
+        "stat": 3
+      }
+    ],
+    "r3": [
+      {
+        "id": "thuyen_truong",
+        "name": "Thuyền trưởng",
+        "stat": 1,
+        "from": [
+          "lao_ngu"
+        ]
+      },
+      {
+        "id": "lai_bien",
+        "name": "Lái buôn đường biển",
+        "stat": 5,
+        "from": [
+          "lai_ca",
+          "trum_van"
+        ]
+      },
+      {
+        "id": "dau_muc_thuy",
+        "name": "Đầu mục thủy binh",
+        "stat": 2,
+        "from": [
+          "tho_lan"
+        ]
+      }
+    ],
+    "r4": [
+      {
+        "id": "hoa_tieu",
+        "name": "Hoa tiêu",
+        "stat": 1,
+        "from": [
+          "thuyen_truong",
+          "lai_bien"
+        ]
+      },
+      {
+        "id": "thu_linh_thuy",
+        "name": "Thủ lĩnh thủy binh",
+        "stat": 2,
+        "from": [
+          "dau_muc_thuy"
+        ]
+      }
+    ]
+  },
+  "tho_thu_cong": {
+    "r2": [
+      {
+        "id": "tho_lanh",
+        "name": "Thợ lành",
+        "stat": 4
+      },
+      {
+        "id": "tho_ve_kieu",
+        "name": "Thợ vẽ kiểu",
+        "stat": 1
+      },
+      {
+        "id": "lai_do",
+        "name": "Lái đồ mỹ nghệ",
+        "stat": 5
+      },
+      {
+        "id": "trum_phuong_tho",
+        "name": "Trùm phường thợ",
+        "stat": 3
+      }
+    ],
+    "r3": [
+      {
+        "id": "tho_ca",
+        "name": "Thợ cả",
+        "stat": 4,
+        "from": [
+          "tho_lanh",
+          "trum_phuong_tho"
+        ]
+      },
+      {
+        "id": "hoa_cong",
+        "name": "Họa công",
+        "stat": 1,
+        "from": [
+          "tho_ve_kieu"
+        ]
+      },
+      {
+        "id": "lai_my_nghe",
+        "name": "Lái buôn đồ mỹ nghệ",
+        "stat": 5,
+        "from": [
+          "lai_do"
+        ]
+      }
+    ],
+    "r4": [
+      {
+        "id": "danh_tuong",
+        "name": "Danh tượng",
+        "stat": 4,
+        "from": [
+          "tho_ca",
+          "hoa_cong"
+        ]
+      },
+      {
+        "id": "dai_lai_my_nghe",
+        "name": "Đại lái hàng mỹ nghệ",
+        "stat": 5,
+        "from": [
+          "lai_my_nghe"
+        ]
+      }
+    ]
+  },
+  "tho_ren": {
+    "r2": [
+      {
+        "id": "tho_ren_lanh",
+        "name": "Thợ rèn lành",
+        "stat": 4
+      },
+      {
+        "id": "tho_thu_kiem",
+        "name": "Thợ thử kiếm",
+        "stat": 0
+      },
+      {
+        "id": "tho_luyen_thep",
+        "name": "Thợ luyện thép",
+        "stat": 1
+      },
+      {
+        "id": "lai_sat",
+        "name": "Lái sắt",
+        "stat": 5
+      }
+    ],
+    "r3": [
+      {
+        "id": "tho_ca_ren",
+        "name": "Thợ cả lò rèn",
+        "stat": 4,
+        "from": [
+          "tho_ren_lanh",
+          "tho_luyen_thep"
+        ]
+      },
+      {
+        "id": "tho_quan_gioi",
+        "name": "Thợ rèn quân giới",
+        "stat": 2,
+        "from": [
+          "tho_thu_kiem"
+        ]
+      },
+      {
+        "id": "lai_buon_sat",
+        "name": "Lái buôn sắt thép",
+        "stat": 5,
+        "from": [
+          "lai_sat"
+        ]
+      }
+    ],
+    "r4": [
+      {
+        "id": "kiem_tuong",
+        "name": "Kiếm tượng",
+        "stat": 4,
+        "from": [
+          "tho_ca_ren",
+          "tho_quan_gioi"
+        ]
+      },
+      {
+        "id": "dai_lai_sat",
+        "name": "Đại lái sắt thép",
+        "stat": 5,
+        "from": [
+          "lai_buon_sat"
+        ]
+      }
+    ]
+  },
+  "tieu_thuong": {
+    "r2": [
+      {
+        "id": "chu_sap",
+        "name": "Chủ sạp",
+        "stat": 5
+      },
+      {
+        "id": "thay_tinh",
+        "name": "Thầy tính",
+        "stat": 1
+      },
+      {
+        "id": "moi_lai",
+        "name": "Người mối lái",
+        "stat": 6
+      },
+      {
+        "id": "trum_cho",
+        "name": "Trùm chợ",
+        "stat": 3
+      }
+    ],
+    "r3": [
+      {
+        "id": "chu_hieu",
+        "name": "Chủ hiệu",
+        "stat": 5,
+        "from": [
+          "chu_sap",
+          "thay_tinh"
+        ]
+      },
+      {
+        "id": "moi_gioi",
+        "name": "Môi giới lớn",
+        "stat": 6,
+        "from": [
+          "moi_lai"
+        ]
+      },
+      {
+        "id": "cai_cho",
+        "name": "Cai chợ",
+        "stat": 3,
+        "from": [
+          "trum_cho"
+        ]
+      }
+    ],
+    "r4": [
+      {
+        "id": "phu_thuong",
+        "name": "Phú thương",
+        "stat": 5,
+        "from": [
+          "chu_hieu",
+          "moi_gioi"
+        ]
+      },
+      {
+        "id": "truong_phuong_buon",
+        "name": "Trưởng phường buôn",
+        "stat": 3,
+        "from": [
+          "cai_cho"
+        ]
+      }
+    ]
+  },
+  "thuong_nhan": {
+    "r2": [
+      {
+        "id": "lai_buon_lon",
+        "name": "Lái buôn lớn",
+        "stat": 5
+      },
+      {
+        "id": "chuong_quy",
+        "name": "Chưởng quỹ",
+        "stat": 1
+      },
+      {
+        "id": "khach_duong_xa",
+        "name": "Khách buôn đường xa",
+        "stat": 0
+      },
+      {
+        "id": "mai_bien",
+        "name": "Mãi biện",
+        "stat": 6
+      }
+    ],
+    "r3": [
+      {
+        "id": "dai_thuong",
+        "name": "Đại thương nhân",
+        "stat": 5,
+        "from": [
+          "lai_buon_lon",
+          "chuong_quy"
+        ]
+      },
+      {
+        "id": "truong_doan_buon",
+        "name": "Trưởng đoàn buôn",
+        "stat": 2,
+        "from": [
+          "khach_duong_xa"
+        ]
+      },
+      {
+        "id": "dai_mai_bien",
+        "name": "Đại mãi biện",
+        "stat": 6,
+        "from": [
+          "mai_bien"
+        ]
+      }
+    ],
+    "r4": [
+      {
+        "id": "cu_phu",
+        "name": "Cự phú",
+        "stat": 5,
+        "from": [
+          "dai_thuong"
+        ]
+      },
+      {
+        "id": "hoang_thuong",
+        "name": "Hoàng thương",
+        "stat": 3,
+        "from": [
+          "truong_doan_buon",
+          "dai_mai_bien"
+        ]
+      }
+    ]
+  },
+  "binh_si": {
+    "r2": [
+      {
+        "id": "ngu_truong",
+        "name": "Ngũ trưởng",
+        "stat": 2
+      },
+      {
+        "id": "dung_si",
+        "name": "Dũng sĩ",
+        "stat": 0
+      },
+      {
+        "id": "trinh_sat",
+        "name": "Lính trinh sát",
+        "stat": 1
+      },
+      {
+        "id": "cong_binh",
+        "name": "Công binh",
+        "stat": 4
+      }
+    ],
+    "r3": [
+      {
+        "id": "thap_truong",
+        "name": "Thập trưởng",
+        "stat": 2,
+        "from": [
+          "ngu_truong",
+          "trinh_sat"
+        ]
+      },
+      {
+        "id": "tien_phong",
+        "name": "Tiên phong",
+        "stat": 0,
+        "from": [
+          "dung_si"
+        ]
+      },
+      {
+        "id": "doi_cong_binh",
+        "name": "Đội trưởng công binh",
+        "stat": 4,
+        "from": [
+          "cong_binh"
+        ]
+      }
+    ],
+    "r4": [
+      {
+        "id": "bach_phu",
+        "name": "Bách phu trưởng",
+        "stat": 2,
+        "from": [
+          "thap_truong",
+          "doi_cong_binh"
+        ]
+      },
+      {
+        "id": "lao_binh",
+        "name": "Lão binh trăm trận",
+        "stat": 0,
+        "from": [
+          "tien_phong"
+        ]
+      }
+    ]
+  },
+  "vo_sinh": {
+    "r2": [
+      {
+        "id": "vo_si",
+        "name": "Võ sĩ",
+        "stat": 0
+      },
+      {
+        "id": "ap_tieu",
+        "name": "Người áp tiêu",
+        "stat": 2
+      },
+      {
+        "id": "van_vo_sinh",
+        "name": "Văn võ sinh",
+        "stat": 1
+      },
+      {
+        "id": "mai_vo",
+        "name": "Người mãi võ",
+        "stat": 6
+      }
+    ],
+    "r3": [
+      {
+        "id": "cao_thu",
+        "name": "Cao thủ",
+        "stat": 0,
+        "from": [
+          "vo_si",
+          "mai_vo"
+        ]
+      },
+      {
+        "id": "tieu_dau",
+        "name": "Tiêu đầu",
+        "stat": 2,
+        "from": [
+          "ap_tieu"
+        ]
+      },
+      {
+        "id": "vo_nho",
+        "name": "Võ nho",
+        "stat": 1,
+        "from": [
+          "van_vo_sinh"
+        ]
+      }
+    ],
+    "r4": [
+      {
+        "id": "vo_su_bac",
+        "name": "Võ sư",
+        "stat": 0,
+        "from": [
+          "cao_thu",
+          "vo_nho"
+        ]
+      },
+      {
+        "id": "tong_tieu_dau",
+        "name": "Tổng tiêu đầu",
+        "stat": 2,
+        "from": [
+          "tieu_dau"
+        ]
+      }
+    ]
+  },
+  "kiem_khach": {
+    "r2": [
+      {
+        "id": "hiep_si",
+        "name": "Hiệp sĩ",
+        "stat": 0
+      },
+      {
+        "id": "lang_khach",
+        "name": "Lãng khách",
+        "stat": 6
+      },
+      {
+        "id": "ho_vien",
+        "name": "Hộ viện",
+        "stat": 2
+      },
+      {
+        "id": "thu_kiem",
+        "name": "Thư kiếm",
+        "stat": 1
+      }
+    ],
+    "r3": [
+      {
+        "id": "danh_kiem",
+        "name": "Danh kiếm",
+        "stat": 0,
+        "from": [
+          "hiep_si",
+          "lang_khach"
+        ]
+      },
+      {
+        "id": "dau_muc_ho_vien",
+        "name": "Đầu mục hộ viện",
+        "stat": 2,
+        "from": [
+          "ho_vien"
+        ]
+      },
+      {
+        "id": "van_kiem",
+        "name": "Văn kiếm",
+        "stat": 1,
+        "from": [
+          "thu_kiem"
+        ]
+      }
+    ],
+    "r4": [
+      {
+        "id": "kiem_su",
+        "name": "Kiếm sư",
+        "stat": 0,
+        "from": [
+          "danh_kiem",
+          "van_kiem"
+        ]
+      },
+      {
+        "id": "thong_linh_ho_vien",
+        "name": "Thống lĩnh hộ viện",
+        "stat": 2,
+        "from": [
+          "dau_muc_ho_vien"
+        ]
+      }
+    ]
+  },
+  "thu_sinh": {
+    "r2": [
+      {
+        "id": "nho_sinh",
+        "name": "Nho sinh",
+        "stat": 1
+      },
+      {
+        "id": "thay_do_lang",
+        "name": "Thầy đồ",
+        "stat": 3
+      },
+      {
+        "id": "thi_si",
+        "name": "Thi sĩ",
+        "stat": 6
+      },
+      {
+        "id": "binh_thu_sinh",
+        "name": "Binh thư sinh",
+        "stat": 2
+      }
+    ],
+    "r3": [
+      {
+        "id": "van_si",
+        "name": "Văn sĩ",
+        "stat": 1,
+        "from": [
+          "nho_sinh",
+          "thi_si"
+        ]
+      },
+      {
+        "id": "thuc_su",
+        "name": "Thục sư",
+        "stat": 3,
+        "from": [
+          "thay_do_lang"
+        ]
+      },
+      {
+        "id": "muu_khach",
+        "name": "Mưu khách",
+        "stat": 2,
+        "from": [
+          "binh_thu_sinh"
+        ]
+      }
+    ],
+    "r4": [
+      {
+        "id": "danh_nho",
+        "name": "Danh nho",
+        "stat": 1,
+        "from": [
+          "van_si",
+          "thuc_su"
+        ]
+      },
+      {
+        "id": "quan_su_si",
+        "name": "Quân sư",
+        "stat": 2,
+        "from": [
+          "muu_khach"
+        ]
+      }
+    ]
+  },
+  "lai_vien": {
+    "r2": [
+      {
+        "id": "thu_lai",
+        "name": "Thư lại",
+        "stat": 3
+      },
+      {
+        "id": "lai_ho",
+        "name": "Lại hộ",
+        "stat": 5
+      },
+      {
+        "id": "lai_hinh",
+        "name": "Lại hình",
+        "stat": 1
+      },
+      {
+        "id": "nguc_lai",
+        "name": "Ngục lại",
+        "stat": 0
+      }
+    ],
+    "r3": [
+      {
+        "id": "lai_muc",
+        "name": "Lại mục",
+        "stat": 3,
+        "from": [
+          "thu_lai",
+          "lai_ho"
+        ]
+      },
+      {
+        "id": "an_lai",
+        "name": "Án lại",
+        "stat": 1,
+        "from": [
+          "lai_hinh"
+        ]
+      },
+      {
+        "id": "cai_nguc",
+        "name": "Cai ngục",
+        "stat": 0,
+        "from": [
+          "nguc_lai"
+        ]
+      }
+    ],
+    "r4": [
+      {
+        "id": "de_lai",
+        "name": "Đề lại",
+        "stat": 3,
+        "from": [
+          "lai_muc",
+          "an_lai"
+        ]
+      },
+      {
+        "id": "de_lao",
+        "name": "Đề lao",
+        "stat": 0,
+        "from": [
+          "cai_nguc"
+        ]
+      }
+    ]
+  },
+  "thay_thuoc": {
+    "r2": [
+      {
+        "id": "lang_trung",
+        "name": "Lang trung",
+        "stat": 1
+      },
+      {
+        "id": "lai_duoc",
+        "name": "Lái dược liệu",
+        "stat": 5
+      },
+      {
+        "id": "thay_bo_gay",
+        "name": "Thầy bó gãy",
+        "stat": 0
+      },
+      {
+        "id": "thay_cuu_dich",
+        "name": "Thầy thuốc cứu dịch",
+        "stat": 3
+      }
+    ],
+    "r3": [
+      {
+        "id": "danh_y",
+        "name": "Danh y",
+        "stat": 1,
+        "from": [
+          "lang_trung",
+          "thay_cuu_dich"
+        ]
+      },
+      {
+        "id": "dai_lai_duoc",
+        "name": "Đại lái dược liệu",
+        "stat": 5,
+        "from": [
+          "lai_duoc"
+        ]
+      },
+      {
+        "id": "quan_y",
+        "name": "Quân y",
+        "stat": 2,
+        "from": [
+          "thay_bo_gay"
+        ]
+      }
+    ],
+    "r4": [
+      {
+        "id": "dai_danh_y",
+        "name": "Đại danh y",
+        "stat": 1,
+        "from": [
+          "danh_y",
+          "dai_lai_duoc"
+        ]
+      },
+      {
+        "id": "lao_quan_y",
+        "name": "Lão quân y",
+        "stat": 2,
+        "from": [
+          "quan_y"
+        ]
+      }
+    ]
+  },
+  "nghe_nhan": {
+    "r2": [
+      {
+        "id": "danh_ca",
+        "name": "Danh ca",
+        "stat": 6
+      },
+      {
+        "id": "ke_chuyen",
+        "name": "Người kể chuyện",
+        "stat": 1
+      },
+      {
+        "id": "kep_vo",
+        "name": "Kép võ",
+        "stat": 0
+      },
+      {
+        "id": "thay_tuong",
+        "name": "Thầy tuồng",
+        "stat": 3
+      }
+    ],
+    "r3": [
+      {
+        "id": "danh_ky",
+        "name": "Danh kỹ",
+        "stat": 6,
+        "from": [
+          "danh_ca",
+          "kep_vo"
+        ]
+      },
+      {
+        "id": "thuyet_thu",
+        "name": "Thuyết thư",
+        "stat": 1,
+        "from": [
+          "ke_chuyen"
+        ]
+      },
+      {
+        "id": "bau_ganh",
+        "name": "Bầu gánh",
+        "stat": 5,
+        "from": [
+          "thay_tuong"
+        ]
+      }
+    ],
+    "r4": [
+      {
+        "id": "nghe_su",
+        "name": "Nghệ sư",
+        "stat": 6,
+        "from": [
+          "danh_ky",
+          "thuyet_thu"
+        ]
+      },
+      {
+        "id": "dai_bau_ganh",
+        "name": "Đại bầu gánh",
+        "stat": 5,
+        "from": [
+          "bau_ganh"
+        ]
+      }
+    ]
+  },
+  "bien_si": {
+    "r2": [
+      {
+        "id": "du_si",
+        "name": "Du sĩ",
+        "stat": 3
+      },
+      {
+        "id": "hung_bien",
+        "name": "Tay hùng biện",
+        "stat": 6
+      },
+      {
+        "id": "luan_si",
+        "name": "Luận sĩ",
+        "stat": 1
+      },
+      {
+        "id": "ban_binh",
+        "name": "Kẻ sĩ bàn binh",
+        "stat": 2
+      }
+    ],
+    "r3": [
+      {
+        "id": "danh_bien",
+        "name": "Danh biện",
+        "stat": 6,
+        "from": [
+          "du_si",
+          "hung_bien"
+        ]
+      },
+      {
+        "id": "sach_si",
+        "name": "Sách sĩ",
+        "stat": 1,
+        "from": [
+          "luan_si"
+        ]
+      },
+      {
+        "id": "luan_binh",
+        "name": "Luận binh khách",
+        "stat": 2,
+        "from": [
+          "ban_binh"
+        ]
+      }
+    ],
+    "r4": [
+      {
+        "id": "tung_hoanh",
+        "name": "Tung hoành gia",
+        "stat": 3,
+        "from": [
+          "danh_bien",
+          "sach_si"
+        ]
+      },
+      {
+        "id": "quan_su_bien",
+        "name": "Quân sư",
+        "stat": 2,
+        "from": [
+          "luan_binh"
+        ]
+      }
+    ]
+  },
+  "phu_khuan_vac": {
+    "r2": [
+      {
+        "id": "phu_lanh",
+        "name": "Phu lành",
+        "stat": 4
+      },
+      {
+        "id": "do_vat",
+        "name": "Đô vật",
+        "stat": 0
+      },
+      {
+        "id": "phu_buon",
+        "name": "Phu buôn",
+        "stat": 5
+      },
+      {
+        "id": "phu_ghi_so",
+        "name": "Phu ghi sổ",
+        "stat": 1
+      }
+    ],
+    "r3": [
+      {
+        "id": "cai_phu",
+        "name": "Cai phu",
+        "stat": 3,
+        "from": [
+          "phu_lanh",
+          "phu_ghi_so"
+        ]
+      },
+      {
+        "id": "do_vat_tieng",
+        "name": "Đô vật có tiếng",
+        "stat": 0,
+        "from": [
+          "do_vat"
+        ]
+      },
+      {
+        "id": "lai_nho",
+        "name": "Lái buôn nhỏ",
+        "stat": 5,
+        "from": [
+          "phu_buon"
+        ]
+      }
+    ],
+    "r4": [
+      {
+        "id": "doc_cong",
+        "name": "Đốc công",
+        "stat": 3,
+        "from": [
+          "cai_phu",
+          "lai_nho"
+        ]
+      },
+      {
+        "id": "do_vat_vo_dich",
+        "name": "Đô vật vô địch",
+        "stat": 0,
+        "from": [
+          "do_vat_tieng"
+        ]
+      }
+    ]
+  }
+}

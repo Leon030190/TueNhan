@@ -1,0 +1,104 @@
+[
+  {
+    "id": "trong_thuong",
+    "name": "Trọng thương",
+    "scope": "ca_nhan",
+    "p": 0.001,
+    "fate_w": 25
+  },
+  {
+    "id": "benh_nang",
+    "name": "Bệnh nặng",
+    "scope": "ca_nhan",
+    "p": 0.0012,
+    "fate_w": 20
+  },
+  {
+    "id": "cao_nhan",
+    "name": "Cao nhân truyền thụ",
+    "scope": "ca_nhan",
+    "p": 0.0005,
+    "fate_w": 15
+  },
+  {
+    "id": "bi_tich",
+    "name": "Tìm được bí tịch",
+    "scope": "ca_nhan",
+    "p": 0.0004,
+    "fate_w": 10
+  },
+  {
+    "id": "doi_thu",
+    "name": "Gặp đối thủ xứng tầm",
+    "scope": "ca_nhan",
+    "p": 0.0008,
+    "fate_w": 15
+  },
+  {
+    "id": "mat_nguoi_than",
+    "name": "Mất người thân",
+    "scope": "ca_nhan",
+    "p": 0.001,
+    "fate_w": 15
+  },
+  {
+    "id": "ham_hai",
+    "name": "Bị hãm hại chính trị",
+    "scope": "ca_nhan",
+    "p": 0.0015
+  },
+  {
+    "id": "khoa_cu",
+    "name": "Khoa cử",
+    "scope": "quoc_gia",
+    "month": 3
+  },
+  {
+    "id": "vo_cu",
+    "name": "Võ cử",
+    "scope": "quoc_gia",
+    "month": 9
+  },
+  {
+    "id": "tich_bien",
+    "name": "Gia tộc bị tịch biên",
+    "scope": "quoc_gia",
+    "p": 0.004
+  },
+  {
+    "id": "tranh_dau",
+    "name": "Tranh đấu phe phái",
+    "scope": "quoc_gia",
+    "p": 0.01
+  },
+  {
+    "id": "lu_lut",
+    "name": "Lũ lụt",
+    "scope": "thanh_tran",
+    "p": 0.004
+  },
+  {
+    "id": "han_han",
+    "name": "Hạn hán",
+    "scope": "thanh_tran",
+    "p": 0.003
+  },
+  {
+    "id": "dich_benh",
+    "name": "Dịch bệnh",
+    "scope": "thanh_tran",
+    "p": 0.003
+  },
+  {
+    "id": "thuong_lo",
+    "name": "Thương lộ hưng thịnh",
+    "scope": "thanh_tran",
+    "p": 0.005
+  },
+  {
+    "id": "xung_dot",
+    "name": "Xung đột biên giới",
+    "scope": "the_gioi",
+    "p": 0.04
+  }
+]

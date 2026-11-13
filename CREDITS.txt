@@ -1,0 +1,24 @@
+TUỆ NHÃN: THỨC ANH HÙNG · ghi công
+===================================
+
+Engine: Godot Engine 4.7 (giấy phép MIT, xem LICENSE_GODOT.txt).
+
+Phông chữ: Playfair Display – Claus Eggers Sørensen, SIL Open Font License 1.1
+(xem LICENSE_PlayfairDisplay_OFL.txt).
+
+Hình ảnh: minh họa (bản đồ, thành trì, chân dung, key art) tạo bằng Google Gemini,
+hậu kỳ bằng công cụ riêng của dự án.
+
+Nhạc: từ Pixabay, theo Pixabay Content License (https://pixabay.com/service/license/).
+  The Eternal Ascension – Joyvideo123
+  La Voie du Silence – u_akuzvxib8r
+  Guqin Melody – LunarBoomMusic
+  Mongolian Steppe Folk: Morin Khuur, Jaw Harp & Drums – SoundsByAmelia
+  Minimal Mongolian Folk: Morin Khuur & Jaw Harp – SoundsByAmelia
+  Atlas • Vietnam – Vadim_Makes_Sound
+  空山箫语 · Whisper of Empty Mountains – RainStreetCat
+  guzheng and Japanese bamboo flute 1, 8 – Guzheng-Soundtrack
+  Atlas • China – Vadim_Makes_Sound
+  Shadow of the Ancient Forest (Full version) – kaazoom
+  The Last Dynasty (full track) – kaazoom
+  Chinese Cinematic Drama – Erhu and Guzheng Dialogue – OpenMindAudio

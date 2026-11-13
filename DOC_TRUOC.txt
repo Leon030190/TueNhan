@@ -1,0 +1,29 @@
+TUỆ NHÃN: THỨC ANH HÙNG · bản demo v1.0.0
+==========================================
+
+Game chiến lược theo lượt về nhìn người: bạn mang Đôi Mắt Thẩm Định, tìm những
+viên ngọc thô còn vô danh, nuôi dạy họ, rồi tiến cử vào triều đình năm nước.
+
+CÀI ĐẶT
+- Giải nén cả thư mục, chạy TueNhan.exe (giữ TueNhan.pck nằm cạnh file exe).
+- Windows 10/11 64-bit. Màn hình khuyên dùng 1600×900 trở lên.
+- Windows SmartScreen có thể cảnh báo vì file chưa ký số: bấm "More info" → "Run anyway".
+
+BẮT ĐẦU
+- Menu → Ván mới → chọn Mệnh cách. Ván đầu tiên tự mở Hướng dẫn (mở lại bất cứ lúc nào:
+  menu chính, hoặc trong game: Hệ thống ▾ → Hướng dẫn).
+- Chữ gạch chân có giải thích khi rê chuột lên.
+
+PHÍM
+- Bấm phím bất kỳ / chuột: bỏ qua video mở đầu.
+- Bot tự chơi (Hệ thống ▾ → Bot tự chơi): Space tạm dừng, + / − đổi tốc độ, Esc tắt.
+
+FILE LƯU
+- %APPDATA%\Godot\app_userdata\Tuệ Nhãn- Thức Anh Hùng\
+  (save.sav: ván đang chơi · legacy.sav: di sản qua các đời · settings.cfg: cài đặt)
+- Nhật ký lỗi nằm trong thư mục logs\ ở cùng chỗ; gửi kèm khi báo lỗi giúp mình.
+
+GÓP Ý
+- Viết bình luận trên trang itch.io của game: lỗi gặp phải, chỗ khó hiểu, cảm nhận.
+
+Ghi công và giấy phép: xem CREDITS.txt, LICENSE_GODOT.txt, LICENSE_PlayfairDisplay_OFL.txt.
