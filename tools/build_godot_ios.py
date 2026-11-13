@@ -48,20 +48,19 @@ def main():
     print("Giải nén template thành công!")
 
     print("=== [3/6] TẢI VÀ CHUẨN BỊ GÓI DỮ LIỆU TUỆ NHÃN PCK ===")
-    pck_path = os.path.join(work_dir, "godot.pck")
-    # Tải từ GitHub Release nếu chưa có
+    pck_path = os.path.join(work_dir, "godot_apple_embedded.pck")
     if not os.path.exists("TueNhan.pck"):
         print("Đang tải TueNhan.pck từ GitHub Release v1.0.0...")
         subprocess.run(["gh", "release", "download", "v1.0.0", "-p", "TueNhan.pck", "--clobber"], check=True)
     
     shutil.copy2("TueNhan.pck", pck_path)
-    shutil.copy2("TueNhan.pck", os.path.join(work_dir, "godot_apple_embedded", "godot.pck"))
+    shutil.copy2("TueNhan.pck", os.path.join(work_dir, "godot_apple_embedded", "godot_apple_embedded.pck"))
     shutil.copy2("TueNhan.pck", os.path.join(work_dir, "godot_apple_embedded", "data.pck"))
 
     print("=== [4/6] CẤU HÌNH DỰ ÁN XCODE VÀ THƯ VIỆN ĐỘNG CƠ C++ ===")
-    # Đổi tên / sao chép libgodot.ios.release.xcframework thành godot.xcframework
+    # Đổi tên / sao chép libgodot.ios.release.xcframework thành godot_apple_embedded.xcframework
     framework_src = os.path.join(work_dir, "libgodot.ios.release.xcframework")
-    framework_dest = os.path.join(work_dir, "godot.xcframework")
+    framework_dest = os.path.join(work_dir, "godot_apple_embedded.xcframework")
     if os.path.exists(framework_dest):
         shutil.rmtree(framework_dest)
     shutil.copytree(framework_src, framework_dest)
@@ -72,26 +71,26 @@ def main():
         pbx = f.read()
 
     pbx_subs = {
-        "$binary": "godot",
+        "$binary": "godot_apple_embedded",
         "$name": "TueNhan",
         "$bundle_identifier": "com.tuenhan.game",
         "$version": "1.0.0",
         "$short_version": "1.0.0",
         "$targeted_device_family": "1,2",
-        "$os_deployment_target": "14.0",
+        "$os_deployment_target": "IPHONEOS_DEPLOYMENT_TARGET = 14.0;",
         "$sdkroot": "iphoneos",
         "$valid_archs": "arm64",
         "$godot_archs": "arm64",
-        "$code_sign_identity_debug": '""',
-        "$code_sign_identity_release": '""',
+        "$code_sign_identity_debug": "",
+        "$code_sign_identity_release": "",
         "$code_sign_style_debug": "Manual",
         "$code_sign_style_release": "Manual",
         "$team_id": '""',
-        "$provisioning_profile_specifier_debug": '""',
-        "$provisioning_profile_specifier_release": '""',
-        "$provisioning_profile_uuid_debug": '""',
-        "$provisioning_profile_uuid_release": '""',
-        "$linker_flags": '"-ObjC"',
+        "$provisioning_profile_specifier_debug": "",
+        "$provisioning_profile_specifier_release": "",
+        "$provisioning_profile_uuid_debug": "",
+        "$provisioning_profile_uuid_release": "",
+        "$linker_flags": "-ObjC",
         "$modules_buildfile": "",
         "$modules_buildgrp": "",
         "$modules_buildphase": "",
@@ -134,7 +133,7 @@ def main():
         "$microphone_usage_description": "Khong su dung",
         "$interface_orientations": "<string>UIInterfaceOrientationLandscapeLeft</string>\n\t\t<string>UIInterfaceOrientationLandscapeRight</string>",
         "$ipad_interface_orientations": "<string>UIInterfaceOrientationLandscapeLeft</string>\n\t\t<string>UIInterfaceOrientationLandscapeRight</string>",
-        "$additional_plist_content": "",
+        "$additional_plist_content": "<key>CFBundleSupportedPlatforms</key>\n\t<array>\n\t\t<string>iPhoneOS</string>\n\t</array>",
         "$plist_launch_screen_name": "<key>UILaunchStoryboardName</key>\n\t<string>Launch Screen</string>"
     }
     for k, v in plist_subs.items():
@@ -186,24 +185,38 @@ def main():
         shutil.rmtree(app_dest)
     shutil.copytree(app_src, app_dest)
 
-    # Đảm bảo godot.pck nằm trong bundle
-    shutil.copy2("TueNhan.pck", os.path.join(app_dest, "godot.pck"))
+    # Đảm bảo các bản sao của PCK nằm trong bundle để Godot luôn tìm thấy
+    shutil.copy2("TueNhan.pck", os.path.join(app_dest, "godot_apple_embedded.pck"))
     shutil.copy2("TueNhan.pck", os.path.join(app_dest, "TueNhan.pck"))
+    shutil.copy2("TueNhan.pck", os.path.join(app_dest, "data.pck"))
 
-    # Đổi tên file nhị phân thành TueNhan
+    # Đổi tên file thực thi chính thành TueNhan và đồng bộ Info.plist
     binary_orig = os.path.join(app_dest, "godot_apple_embedded")
     binary_dest = os.path.join(app_dest, "TueNhan")
     if os.path.exists(binary_orig):
         shutil.move(binary_orig, binary_dest)
+        
+    final_plist = os.path.join(app_dest, "Info.plist")
+    if os.path.exists(final_plist):
+        with open(final_plist, "r", encoding="utf-8") as f:
+            p_data = f.read()
+        p_data = p_data.replace("<string>godot_apple_embedded</string>", "<string>TueNhan</string>")
+        with open(final_plist, "w", encoding="utf-8") as f:
+            f.write(p_data)
 
-    # Đóng gói zip thành TueNhan.ipa
     output_ipa = "TueNhan_Playable.ipa"
-    print(f"Đang tạo {output_ipa}...")
-    shutil.make_archive("TueNhan_tmp", "zip", "build", "Payload")
-    shutil.move("TueNhan_tmp.zip", output_ipa)
+    print(f"Đang đóng gói {output_ipa}...")
+    
+    # Tạo zip với thư mục gốc Payload/TueNhan.app
+    with zipfile.ZipFile(output_ipa, "w", zipfile.ZIP_DEFLATED) as zip_f:
+        for root, dirs, files in os.walk("build/Payload"):
+            for fn in files:
+                full_p = os.path.join(root, fn)
+                rel_p = os.path.relpath(full_p, "build")
+                zip_f.write(full_p, rel_p.replace(os.sep, "/"))
 
     size_mb = os.path.getsize(output_ipa) / (1024 * 1024)
-    print(f"Build hoàn tất! {output_ipa} ({size_mb:.2f} MB)")
+    print(f"Build thành công! File: {output_ipa} ({size_mb:.2f} MB)")
 
 if __name__ == "__main__":
     main()
