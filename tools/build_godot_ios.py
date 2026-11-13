@@ -118,6 +118,17 @@ def main():
     with open(pbxproj_path, "w", encoding="utf-8") as f:
         f.write(pbx)
 
+    # Thay thế placeholders trong godot_apple_embedded.xcscheme
+    scheme_path = os.path.join(work_dir, "godot_apple_embedded.xcodeproj", "xcshareddata", "xcschemes", "godot_apple_embedded.xcscheme")
+    if os.path.exists(scheme_path):
+        with open(scheme_path, "r", encoding="utf-8") as f:
+            sc_data = f.read()
+        sc_data = sc_data.replace("$binary", "godot_apple_embedded")
+        sc_data = sc_data.replace("$default_build_config", "Release")
+        sc_data = sc_data.replace("A340BDFEBCA49239A941883D", "D0BCFE3318AEBDA2004A7AAE")
+        with open(scheme_path, "w", encoding="utf-8") as f:
+            f.write(sc_data)
+
     # Thay thế placeholders trong Info.plist
     plist_path = os.path.join(work_dir, "godot_apple_embedded", "godot_apple_embedded-Info.plist")
     with open(plist_path, "r", encoding="utf-8") as f:
@@ -162,25 +173,30 @@ def main():
             shutil.rmtree(dest_icons)
         shutil.copytree("ios/Assets.xcassets/AppIcon.appiconset", dest_icons)
 
-    print("=== [5/6] BIÊN DỊCH BẰNG XCODE (XCODEBUILD) ===")
+    print("=== [5/6] BIÊN DỊCH BẰNG XCODEBUILD BUILD ===")
+    out_build_dir = os.path.abspath("build/Release-iphoneos")
+    os.makedirs(out_build_dir, exist_ok=True)
+    
     cmd = [
-        "xcodebuild", "archive",
+        "xcodebuild", "build",
         "-project", os.path.join(work_dir, "godot_apple_embedded.xcodeproj"),
-        "-scheme", "godot_apple_embedded",
+        "-target", "godot_apple_embedded",
         "-configuration", "Release",
         "-sdk", "iphoneos",
         "-arch", "arm64",
-        "-archivePath", "build/TueNhan.xcarchive",
+        f"CONFIGURATION_BUILD_DIR={out_build_dir}",
         "CODE_SIGNING_ALLOWED=NO",
         "CODE_SIGNING_REQUIRED=NO"
     ]
-    print("Đang chạy lệnh xcodebuild archive...")
+    print(f"Đang chạy lệnh: {' '.join(cmd)}")
     subprocess.run(cmd, check=True)
 
-    print("=== [6/6] ĐÓNG GÓI THÀNH FILE TUENHAN.IPA ===")
-    os.makedirs("build/Payload", exist_ok=True)
-    app_src = "build/TueNhan.xcarchive/Products/Applications/godot_apple_embedded.app"
-    app_dest = "build/Payload/TueNhan.app"
+    print("=== [6/6] ĐÓNG GÓI THÀNH FILE TUENHAN_PLAYABLE.IPA ===")
+    payload_dir = os.path.abspath("build/Payload")
+    os.makedirs(payload_dir, exist_ok=True)
+    
+    app_src = os.path.join(out_build_dir, "godot_apple_embedded.app")
+    app_dest = os.path.join(payload_dir, "TueNhan.app")
     if os.path.exists(app_dest):
         shutil.rmtree(app_dest)
     shutil.copytree(app_src, app_dest)
@@ -207,9 +223,8 @@ def main():
     output_ipa = "TueNhan_Playable.ipa"
     print(f"Đang đóng gói {output_ipa}...")
     
-    # Tạo zip với thư mục gốc Payload/TueNhan.app
     with zipfile.ZipFile(output_ipa, "w", zipfile.ZIP_DEFLATED) as zip_f:
-        for root, dirs, files in os.walk("build/Payload"):
+        for root, dirs, files in os.walk(payload_dir):
             for fn in files:
                 full_p = os.path.join(root, fn)
                 rel_p = os.path.relpath(full_p, "build")
